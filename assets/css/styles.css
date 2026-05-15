@@ -258,7 +258,7 @@ img, svg { display: block; max-width: 100%; }
 .tb-collapse:hover { background: var(--surface-2); color: var(--secondary); }
 .tb-search {
   position: relative;
-  flex: 1; max-width: 480px;
+  flex: 1; max-width: 720px;
 }
 .tb-search input {
   width: 100%;
@@ -292,6 +292,18 @@ img, svg { display: block; max-width: 100%; }
 }
 .tb-icon-btn:hover { background: var(--surface-2); color: var(--secondary); }
 .tb-icon-btn .dot { position: absolute; top: 8px; right: 9px; width: 8px; height: 8px; background: var(--accent); border: 2px solid #fff; border-radius: 50%; }
+
+/* Vertical separator inside topbar action cluster */
+.tb-sep { width: 1px; height: 24px; background: var(--border); margin: 0 6px; }
+
+/* Profile avatar button (compact circle) */
+.tb-avatar-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0; width: 36px; height: 36px; border-radius: 50%;
+  transition: transform .15s, box-shadow .15s;
+}
+.tb-avatar-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(31,67,151,.25); }
+.tb-avatar-btn .avatar { width: 32px; height: 32px; font-size: 12px; }
 
 /* ---------- Top horizontal nav tabs (Figma-style) ---------- */
 .tb-tabs { display: flex; align-items: center; gap: 28px; margin: 0 16px; }
