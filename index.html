@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dashboard · FES DMS</title>
+<title>Dashboard · FES VI Admin</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -12,10 +12,10 @@
   <!-- ============================= SIDEBAR ============================= -->
   <aside class="sidebar">
     <div class="sb-brand">
-      <div class="sb-logo">FE</div>
+      <div class="sb-logo">VI</div>
       <div class="sb-brand-text">
-        <strong>FES Repository</strong>
-        <span>Document &amp; Legal DMS</span>
+        <strong>FES · VI Admin</strong>
+        <span>Village Institutions Repository</span>
       </div>
     </div>
 
@@ -89,10 +89,10 @@
     </div>
 
     <div class="sb-foot">
-      <div class="avatar c1">PS</div>
+      <div class="avatar c1">JS</div>
       <div class="sb-foot-info">
-        <strong>Priya Sharma</strong>
-        <span>Super Admin</span>
+        <strong>Jay Sharma</strong>
+        <span>FES Admin</span>
       </div>
       <a href="login.html" class="tb-icon-btn" title="Sign out">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
@@ -103,21 +103,39 @@
   <!-- ============================= MAIN ============================= -->
   <div class="main">
 
-    <!-- TOPBAR -->
+    <!-- TOPBAR · Figma floating glass header with horizontal nav tabs -->
     <header class="topbar">
       <button class="tb-collapse" data-collapse aria-label="Collapse sidebar">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
+
+      <nav class="tb-tabs" aria-label="Module nav">
+        <a href="index.html" class="tb-tab active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          Workspace
+        </a>
+        <a href="documents.html" class="tb-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Approvals
+          <span class="badge-count">24</span>
+        </a>
+        <a href="users.html" class="tb-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          Orgs &amp; Users
+        </a>
+        <a href="archive.html" class="tb-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Downloads
+        </a>
+      </nav>
+
       <div class="tb-search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input placeholder="Search documents, cases, users, audit events..." />
+        <input placeholder="Search VIs, villages, users..." />
         <kbd>⌘K</kbd>
       </div>
+
       <div class="tb-actions">
-        <button class="btn btn-primary btn-sm" data-open-drawer="upload-drawer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-          Upload
-        </button>
         <button class="tb-icon-btn" title="Help">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
         </button>
@@ -125,9 +143,12 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg>
           <span class="dot"></span>
         </button>
-        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
-        <button style="display:flex; align-items:center; gap:8px; padding: 4px 8px 4px 4px; border-radius:8px;" class="tb-icon-btn" title="Account">
-          <span class="avatar c1">PS</span>
+        <button style="display:flex; align-items:center; gap:8px; padding: 4px 10px 4px 4px; border-radius:10px; height:36px;" class="tb-icon-btn" title="Account">
+          <span class="avatar c1">JS</span>
+          <span style="display:flex; flex-direction:column; align-items:flex-start; line-height:1.2; font-family: var(--font-display);">
+            <strong style="font-size:13px; color:var(--primary);">Jay Sharma</strong>
+            <span style="font-size:10px; color:var(--text-muted); font-weight:500;">FES Admin</span>
+          </span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
       </div>
@@ -139,174 +160,141 @@
       <div class="page-head">
         <div>
           <div class="crumbs">
+            <span>FES</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             <span>Workspace</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-            <span>Dashboard</span>
+            <span>Overview</span>
           </div>
-          <h1>Welcome back, Priya 👋</h1>
-          <p>Here's the latest activity across your FES document repository.</p>
+          <h1>Welcome back, Jay 👋</h1>
+          <p>1,247 Village Institutions registered across 14 states — here's today's snapshot.</p>
         </div>
         <div class="actions">
-          <button class="btn btn-secondary btn-sm">
+          <button class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
             Last 30 days
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <button class="btn btn-secondary btn-sm">
+          <button class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Export
           </button>
-          <button class="btn btn-primary btn-sm" data-open-drawer="upload-drawer">
+          <button class="btn btn-primary" data-open-drawer="upload-drawer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-            Upload document
+            Add VI
           </button>
         </div>
       </div>
 
-      <!-- KPI ROW -->
+      <!-- KPI ROW · Figma layout: icon left, label + big number + delta right -->
       <div class="kpi-grid">
         <div class="kpi">
+          <div class="kpi-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M14 9h.01M14 13h.01M14 17h.01"/></svg>
+          </div>
           <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Total Documents</div>
-              <div class="kpi-value">24,718</div>
-            </div>
-            <div class="kpi-icon blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <span class="kpi-delta up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17l10-10M17 17V7H7"/></svg>
-              +12.4%
-            </span>
-            <span>vs last month</span>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Legal Documents</div>
-              <div class="kpi-value">3,482</div>
-            </div>
-            <div class="kpi-icon teal">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <span class="kpi-delta up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17l10-10M17 17V7H7"/></svg>
-              +5.7%
-            </span>
-            <span>148 contracts active</span>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Archived Files</div>
-              <div class="kpi-value">6,294</div>
-            </div>
-            <div class="kpi-icon amber">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <span class="kpi-delta down">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M17 7L7 17M7 7v10h10"/></svg>
-              -2.1%
-            </span>
-            <span>132 due for purge</span>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Active Users</div>
-              <div class="kpi-value">412</div>
-            </div>
-            <div class="kpi-icon purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <span class="kpi-delta up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17l10-10M17 17V7H7"/></svg>
-              +8 today
-            </span>
-            <span>across 12 departments</span>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Storage Usage</div>
-              <div class="kpi-value">3.42 <span style="font-size:14px; color:var(--text-subtle); font-weight:500;">TB</span></div>
-            </div>
-            <div class="kpi-icon green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-          </div>
-          <div style="margin-top: 6px;">
-            <div class="storage-bar">
-              <span style="width:42%; background:var(--primary);"></span>
-              <span style="width:18%; background:var(--accent);"></span>
-              <span style="width:8%;  background:var(--warning);"></span>
-            </div>
-            <div class="kpi-foot" style="margin-top:8px;"><span>68% of 5 TB</span><span class="kpi-delta up">+128 GB this month</span></div>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Pending Approvals</div>
-              <div class="kpi-value">24</div>
-            </div>
-            <div class="kpi-icon red">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <span class="badge badge-warning"><span class="dot"></span>4 urgent</span>
-            <span>Avg. 2.3 days SLA</span>
-          </div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Audit Events</div>
-              <div class="kpi-value">1,287</div>
-            </div>
-            <div class="kpi-icon blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-            </div>
-          </div>
-          <div class="kpi-foot">
-            <div class="spark">
-              <span style="height:30%"></span><span style="height:60%"></span><span style="height:40%"></span><span style="height:80%"></span><span style="height:55%"></span><span class="hi" style="height:90%"></span><span style="height:70%"></span>
+            <div class="kpi-label">Total VIs</div>
+            <div class="kpi-value num">1,247</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+12%</span>
+              <span>from last month</span>
             </div>
           </div>
         </div>
 
         <div class="kpi">
+          <div class="kpi-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
           <div class="kpi-top">
-            <div>
-              <div class="kpi-label">Compliance Score</div>
-              <div class="kpi-value">94<span style="font-size:14px; color:var(--text-subtle); font-weight:500;">/100</span></div>
-            </div>
-            <div class="kpi-icon teal">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <div class="kpi-label">Approvals</div>
+            <div class="kpi-value num">24</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+4</span>
+              <span>pending today</span>
             </div>
           </div>
-          <div class="kpi-foot">
-            <span class="badge badge-success"><span class="dot"></span>Excellent</span>
-            <span>Last audit: Apr 28</span>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">Active VIs</div>
+            <div class="kpi-value num">892</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+5.7%</span>
+              <span>engagement rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">Org Users</div>
+            <div class="kpi-value num">412</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+8</span>
+              <span>across 14 states</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">States covered</div>
+            <div class="kpi-value num">14</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+2</span>
+              <span>this quarter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">Submissions this month</div>
+            <div class="kpi-value num">3,128</div>
+            <div class="kpi-foot">
+              <span class="kpi-delta up">+18.4%</span>
+              <span>vs last month</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">Pending review</div>
+            <div class="kpi-value num">24</div>
+            <div class="kpi-foot">
+              <span class="badge badge-warning"><span class="dot"></span>4 urgent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <div class="kpi-top">
+            <div class="kpi-label">Compliance score</div>
+            <div class="kpi-value num">94<span style="font-size:14px; color:var(--text-subtle); font-weight:500;">/100</span></div>
+            <div class="kpi-foot">
+              <span class="badge badge-success"><span class="dot"></span>Excellent</span>
+            </div>
           </div>
         </div>
       </div>
@@ -461,12 +449,12 @@
 
       <!-- ACTIVITY ROW -->
       <div class="dash-grid mt-6">
-        <!-- Recent documents -->
+        <!-- Recent VI Submissions -->
         <div class="card">
           <div class="card-head">
             <div>
-              <h3>Recent Documents</h3>
-              <div class="sub">Most recently uploaded or modified across your workspace</div>
+              <h3>Recent VI Submissions</h3>
+              <div class="sub">Village Institutions registered or updated across the federation</div>
             </div>
             <a href="documents.html" class="btn btn-ghost btn-sm">View all
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -476,86 +464,67 @@
             <table class="data">
               <thead>
                 <tr>
-                  <th>Document</th>
-                  <th>Department</th>
-                  <th>Owner</th>
+                  <th>VI ID</th>
+                  <th>Village Institution</th>
+                  <th>State · District</th>
+                  <th>Land type</th>
                   <th>Status</th>
-                  <th>Modified</th>
+                  <th>Created</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td class="mono" style="font-weight:700; color:var(--primary);">V001</td>
                   <td>
-                    <div class="cell-file">
-                      <div class="file-icon pdf">PDF</div>
-                      <div>
-                        <div class="name">Annual_Compliance_Report_2025.pdf</div>
-                        <div class="meta">v3.2 · 4.2 MB</div>
-                      </div>
-                    </div>
+                    <div style="font-weight:700;">Chaya mahudi / navsari faliya committee</div>
+                    <div class="caption">Block: Bachkaria (North)</div>
                   </td>
-                  <td><span class="badge badge-primary">Legal</span></td>
-                  <td><div class="cell-user"><span class="avatar c1">AS</span> Anika Singh</div></td>
+                  <td>Gujarat · Panch Mahals</td>
+                  <td><span class="badge badge-success">FOREST LAND</span></td>
                   <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
                   <td class="muted">2 min ago</td>
                 </tr>
                 <tr>
+                  <td class="mono" style="font-weight:700; color:var(--primary);">V002</td>
                   <td>
-                    <div class="cell-file">
-                      <div class="file-icon doc">DOC</div>
-                      <div>
-                        <div class="name">Grant_Agreement_NABARD_2026.docx</div>
-                        <div class="meta">v1.0 · 1.8 MB</div>
-                      </div>
-                    </div>
+                    <div style="font-weight:700;">Molvi / chamarvas faliya committee</div>
+                    <div class="caption">Block: Bachkaria (North)</div>
                   </td>
-                  <td><span class="badge badge-accent">Finance</span></td>
-                  <td><div class="cell-user"><span class="avatar c3">RM</span> Ravi Mehta</div></td>
+                  <td>Gujarat · Panch Mahals</td>
+                  <td><span class="badge badge-success">FOREST LAND</span></td>
                   <td><span class="badge badge-warning"><span class="dot"></span>Pending</span></td>
                   <td class="muted">18 min ago</td>
                 </tr>
                 <tr>
+                  <td class="mono" style="font-weight:700; color:var(--primary);">V003</td>
                   <td>
-                    <div class="cell-file">
-                      <div class="file-icon xls">XLS</div>
-                      <div>
-                        <div class="name">Field_Survey_Rajasthan_Q2.xlsx</div>
-                        <div class="meta">v2.1 · 3.5 MB</div>
-                      </div>
-                    </div>
+                    <div style="font-weight:700;">Chora faliya committee</div>
+                    <div class="caption">Block: Bachkaria (North)</div>
                   </td>
-                  <td><span class="badge badge-purple">Conservation</span></td>
-                  <td><div class="cell-user"><span class="avatar c2">KP</span> Kavya Patel</div></td>
+                  <td>Gujarat · Panch Mahals</td>
+                  <td><span class="badge badge-success">FOREST LAND</span></td>
                   <td><span class="badge badge-info"><span class="dot"></span>In review</span></td>
                   <td class="muted">1 hr ago</td>
                 </tr>
                 <tr>
+                  <td class="mono" style="font-weight:700; color:var(--primary);">V008</td>
                   <td>
-                    <div class="cell-file">
-                      <div class="file-icon pdf">PDF</div>
-                      <div>
-                        <div class="name">MoU_Govt_Of_Odisha_Signed.pdf</div>
-                        <div class="meta">v1.0 · 6.4 MB</div>
-                      </div>
-                    </div>
+                    <div style="font-weight:700;">Jay ashapura maa vividhlakshi vikash sanghthan-bachkeriya</div>
+                    <div class="caption">Block: Bachkaria (North)</div>
                   </td>
-                  <td><span class="badge badge-primary">Legal</span></td>
-                  <td><div class="cell-user"><span class="avatar c4">SK</span> Sameer Khan</div></td>
+                  <td>Gujarat · Panch Mahals</td>
+                  <td><span class="badge badge-primary">REVENUE LAND</span></td>
                   <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
                   <td class="muted">3 hr ago</td>
                 </tr>
                 <tr>
+                  <td class="mono" style="font-weight:700; color:var(--primary);">V012</td>
                   <td>
-                    <div class="cell-file">
-                      <div class="file-icon img">IMG</div>
-                      <div>
-                        <div class="name">Watershed_Survey_Maps.zip</div>
-                        <div class="meta">42 files · 184 MB</div>
-                      </div>
-                    </div>
+                    <div style="font-weight:700;">Gram panchayat pasture management committee</div>
+                    <div class="caption">Block: Bachkaria (North)</div>
                   </td>
-                  <td><span class="badge badge-purple">Conservation</span></td>
-                  <td><div class="cell-user"><span class="avatar c6">NV</span> Neha Verma</div></td>
+                  <td>Gujarat · Panch Mahals</td>
+                  <td><span class="badge badge-success">FOREST LAND</span></td>
                   <td><span class="badge badge-outline">Draft</span></td>
                   <td class="muted">Yesterday</td>
                 </tr>
