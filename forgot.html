@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reset password · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-side">
+    <div class="brand">
+      <div class="sb-logo">FE</div>
+      <div class="sb-brand-text">
+        <strong>FES Repository</strong>
+        <span>Foundation for Ecological Security</span>
+      </div>
+    </div>
+    <div class="auth-illu">
+      <h2>Recover access to your secure document workspace.</h2>
+      <p>We'll send you a single-use verification code so you can safely reset your credentials. For account safety, links expire in 10 minutes.</p>
+      <div class="auth-features">
+        <div class="auth-feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>One-time secure verification code</div>
+        <div class="auth-feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div>Links auto-expire in 10 minutes</div>
+        <div class="auth-feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div>Always need help? Email support</div>
+      </div>
+    </div>
+    <div class="auth-foot">© 2026 Foundation for Ecological Security · v3.4.1</div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <a href="login.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--text-muted); font-size:13px; margin-bottom:24px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to sign in
+      </a>
+
+      <h1>Forgot your password?</h1>
+      <p class="sub">No problem. Enter the email associated with your account and we'll send you a verification code.</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='otp.html';">
+        <div class="field">
+          <label>Work email</label>
+          <div class="input-group">
+            <span class="leading">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+            </span>
+            <input class="input" type="email" placeholder="you@fes.org.in" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:20px;">
+          Send verification code
+        </button>
+
+        <div style="margin-top:20px; padding:14px 16px; background:var(--info-50); border-radius:10px; border:1px solid #BAE6FD; display:flex; gap:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2" style="flex-shrink:0; margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <div style="font-size:13px; color:#075985;">
+            <strong style="display:block; margin-bottom:2px;">Need help?</strong>
+            For SSO or organizational accounts, please contact your IT administrator.
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

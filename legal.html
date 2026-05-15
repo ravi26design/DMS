@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal Repository · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="documents.html#upload" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg><span class="nav-label">Upload Center</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search legal cases, agreements, parties..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>New case</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg><span class="dot"></span></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Workspace</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Legal Repository</span></div>
+          <h1>Legal Repository <span class="badge badge-accent" style="vertical-align:middle; margin-left:8px;">🔒 Restricted</span></h1>
+          <p>Case-wise organization of agreements, contracts, compliance and legal correspondence.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export register</button>
+          <button class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>New case</button>
+        </div>
+      </div>
+
+      <!-- Section cards: top categories -->
+      <div class="grid-3 mb-6">
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon blue" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+              <div><strong>Agreements</strong><div class="caption">MoUs, partnerships, NDAs</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">428</strong><div class="caption">documents</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon teal" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+              <div><strong>Contracts</strong><div class="caption">Vendor &amp; service contracts</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">1,142</strong><div class="caption">documents</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon amber" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+              <div><strong>Legal Notices</strong><div class="caption">Notices &amp; intimations</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">86</strong><div class="caption">documents</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon purple" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+              <div><strong>Compliance Documents</strong><div class="caption">Regulatory filings</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">1,386</strong><div class="caption">documents</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon red" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div>
+              <div><strong>Case Records</strong><div class="caption">Litigation &amp; matters</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">142</strong><div class="caption">active cases</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 18px;">
+          <div class="between">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <div class="kpi-icon green" style="width:42px; height:42px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+              <div><strong>Legal Correspondence</strong><div class="caption">Letters &amp; emails</div></div>
+            </div>
+            <div style="text-align:right;"><strong style="font-size:18px;">298</strong><div class="caption">threads</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <button class="tab active">All cases<span class="count">142</span></button>
+        <button class="tab">Open</button>
+        <button class="tab">Awaiting hearing</button>
+        <button class="tab">Closed</button>
+        <button class="tab">High priority</button>
+      </div>
+
+      <!-- Cases grid -->
+      <div class="grid-3 mt-4">
+        <!-- Case card 1 -->
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-CON-2026-0142</span><span class="badge badge-warning"><span class="dot"></span>In progress</span></div>
+          <h4>Watershed Restoration Agreement · Govt. of Telangana</h4>
+          <div class="summary">Three-year framework agreement for joint watershed restoration projects across 18 districts in Telangana, signed under MGNREGA convergence.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Apr 18, 2026</span>
+              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>12 docs</span>
+            </div>
+            <div class="stack-row">
+              <span class="avatar c1">AS</span>
+              <span class="avatar c4" style="margin-left:-6px;">SK</span>
+              <span class="avatar c3" style="margin-left:-6px;">RM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-LEG-2026-0088</span><span class="badge badge-danger"><span class="dot"></span>Urgent</span></div>
+          <h4>Vendor Contract Dispute · GreenScape Tech</h4>
+          <div class="summary">Vendor invoice discrepancy escalated to legal review. Awaiting response on counter-clarification before mediation proceedings begin.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Mar 02, 2026</span>
+              <span>8 docs</span>
+            </div>
+            <div class="stack-row">
+              <span class="avatar c1">AS</span>
+              <span class="avatar c2" style="margin-left:-6px;">KP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-COR-2026-0211</span><span class="badge badge-success"><span class="dot"></span>Approved</span></div>
+          <h4>NABARD Grant Agreement FY26</h4>
+          <div class="summary">Multi-year grant agreement under JIVA programme covering 1,400 hectares of natural-farming demonstration plots.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Feb 14, 2026</span>
+              <span>22 docs</span>
+            </div>
+            <div class="stack-row">
+              <span class="avatar c3">RM</span>
+              <span class="avatar c5" style="margin-left:-6px;">DT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-LEG-2026-0102</span><span class="badge badge-info"><span class="dot"></span>Hearing scheduled</span></div>
+          <h4>Land Use Permit · Punjab Block-7</h4>
+          <div class="summary">Renewal of land-use permit for the FES community forest pilot. Hearing scheduled with state forest department on May 22.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span>Mar 28, 2026</span>
+              <span>6 docs</span>
+            </div>
+            <div class="stack-row">
+              <span class="avatar c4">SK</span>
+              <span class="avatar c6" style="margin-left:-6px;">NV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-LEG-2026-0079</span><span class="badge badge-success"><span class="dot"></span>Closed</span></div>
+          <h4>Employment Tribunal · Sridhar Petition</h4>
+          <div class="summary">Settled employee grievance regarding contractual conversion. Final order issued by tribunal. Filed for archival next quarter.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span>Jan 21, 2026</span>
+              <span>14 docs</span>
+            </div>
+            <div class="stack-row"><span class="avatar c1">AS</span></div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="between"><span class="ref">FES-LEG-2026-0163</span><span class="badge badge-warning"><span class="dot"></span>In progress</span></div>
+          <h4>FCRA Renewal Filing 2026–29</h4>
+          <div class="summary">Triennial renewal of FCRA registration. Preparing consolidated annual reports and bank certifications for MoHA submission.</div>
+          <div class="foot">
+            <div style="display:flex; gap:14px; font-size:12.5px; color:var(--text-subtle); align-items:center;">
+              <span>May 02, 2026</span>
+              <span>34 docs</span>
+            </div>
+            <div class="stack-row">
+              <span class="avatar c1">AS</span>
+              <span class="avatar c3" style="margin-left:-6px;">RM</span>
+              <span class="avatar c5" style="margin-left:-6px;">DT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case detail mock: Case timeline + Linked docs -->
+      <h3 class="mt-8 mb-4">Featured Case · FES-CON-2026-0142</h3>
+      <div class="dash-grid">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Case Timeline</h3><div class="sub">Chronological events &amp; milestones</div></div>
+            <button class="btn btn-ghost btn-sm">Add event</button>
+          </div>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-dot success"></span>
+                <div class="tl-content">
+                  <div class="head"><div class="title">Agreement signed at Hyderabad Secretariat</div><span class="time">Apr 28, 2026</span></div>
+                  <div class="desc">Signed by Secretary, Rural Development and Director, FES. Notarized stamp paper attached.</div>
+                </div>
+              </div>
+              <div class="tl-item">
+                <span class="tl-dot"></span>
+                <div class="tl-content">
+                  <div class="head"><div class="title">Cabinet approval received</div><span class="time">Apr 18, 2026</span></div>
+                  <div class="desc">Cabinet note approved with conditions on quarterly reviews and beneficiary reporting.</div>
+                </div>
+              </div>
+              <div class="tl-item">
+                <span class="tl-dot warning"></span>
+                <div class="tl-content">
+                  <div class="head"><div class="title">Legal review completed with notes</div><span class="time">Apr 10, 2026</span></div>
+                  <div class="desc">Counsel suggested 3 clause modifications regarding indemnity and dispute resolution.</div>
+                </div>
+              </div>
+              <div class="tl-item">
+                <span class="tl-dot"></span>
+                <div class="tl-content">
+                  <div class="head"><div class="title">Initial draft prepared by FES legal team</div><span class="time">Mar 26, 2026</span></div>
+                  <div class="desc">Drafted by Anika Singh based on similar framework with Karnataka watershed mission.</div>
+                </div>
+              </div>
+              <div class="tl-item">
+                <span class="tl-dot muted"></span>
+                <div class="tl-content">
+                  <div class="head"><div class="title">Case file opened</div><span class="time">Mar 14, 2026</span></div>
+                  <div class="desc">Reference FES-CON-2026-0142 assigned. Stakeholders notified.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case sidebar: metadata + linked docs -->
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h3>Case Metadata</h3></div>
+            <div class="card-body">
+              <div class="stack" style="gap:12px;">
+                <div><div class="caption">Reference</div><strong class="mono">FES-CON-2026-0142</strong></div>
+                <div><div class="caption">Case type</div><span class="badge badge-primary">Agreement</span></div>
+                <div><div class="caption">Counter-party</div><strong>Govt. of Telangana</strong></div>
+                <div><div class="caption">Jurisdiction</div><strong>Hyderabad</strong></div>
+                <div><div class="caption">Effective period</div><strong>Apr 28, 2026 → Mar 31, 2029</strong></div>
+                <div><div class="caption">Value</div><strong>₹ 14.4 Cr</strong></div>
+                <div><div class="caption">Confidentiality</div><span class="badge badge-warning">L3 · Restricted</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>Linked Documents</h3><span class="caption">12</span></div>
+            <div style="padding: 4px 0;">
+              <div style="display:flex; gap:10px; padding: 10px 16px; align-items:center;">
+                <div class="file-icon pdf" style="width:28px; height:28px; font-size:9px;">PDF</div>
+                <div style="flex:1; min-width:0;"><strong style="font-size:13px;">Watershed_Agreement_signed.pdf</strong><div class="caption">v3.0 · 6.4 MB</div></div>
+                <span class="badge badge-success" style="padding:1px 6px;">Final</span>
+              </div>
+              <div style="display:flex; gap:10px; padding: 10px 16px; align-items:center;">
+                <div class="file-icon doc" style="width:28px; height:28px; font-size:9px;">DOC</div>
+                <div style="flex:1; min-width:0;"><strong style="font-size:13px;">Cabinet_Note.docx</strong><div class="caption">v1.0 · 1.2 MB</div></div>
+                <span class="badge badge-success" style="padding:1px 6px;">Final</span>
+              </div>
+              <div style="display:flex; gap:10px; padding: 10px 16px; align-items:center;">
+                <div class="file-icon pdf" style="width:28px; height:28px; font-size:9px;">PDF</div>
+                <div style="flex:1; min-width:0;"><strong style="font-size:13px;">Counsel_Opinion.pdf</strong><div class="caption">v1.0 · 480 KB</div></div>
+                <span class="badge badge-outline" style="padding:1px 6px;">Reference</span>
+              </div>
+              <div style="display:flex; gap:10px; padding: 10px 16px; align-items:center;">
+                <div class="file-icon xls" style="width:28px; height:28px; font-size:9px;">XLS</div>
+                <div style="flex:1; min-width:0;"><strong style="font-size:13px;">Beneficiary_Districts.xlsx</strong><div class="caption">v1.0 · 220 KB</div></div>
+                <span class="badge badge-info" style="padding:1px 6px;">Supporting</span>
+              </div>
+            </div>
+            <div class="card-foot"><span>Show 8 more</span><a href="#" style="color:var(--primary); font-weight:600;">Open file tree</a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

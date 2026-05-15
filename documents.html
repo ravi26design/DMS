@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Documents · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span><span class="nav-badge muted">2.4k</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="documents.html#upload" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg><span class="nav-label">Upload Center</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span><span class="nav-badge">12</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.9 2.9l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.9-2.9l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.9-2.9l.1.1a1.7 1.7 0 001.8.3h0a1.7 1.7 0 001-1.5V3a2 2 0 014 0v.1a1.7 1.7 0 001 1.5h0a1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.9 2.9l-.1.1a1.7 1.7 0 00-.3 1.8v0a1.7 1.7 0 001.5 1H21a2 2 0 010 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search documents, cases, users..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm" data-open-drawer="upload-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Upload</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg><span class="dot"></span></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Workspace</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Documents</span></div>
+          <h1>All Documents</h1>
+          <p>24,718 documents across 12 departments · Showing recently modified first</p>
+        </div>
+        <div class="actions">
+          <div style="display:inline-flex; padding:3px; background:var(--surface-2); border-radius:8px;">
+            <button class="btn btn-sm" style="background:#fff; box-shadow:var(--sh-1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+              List
+            </button>
+            <button class="btn btn-sm btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Grid
+            </button>
+          </div>
+          <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export</button>
+          <button class="btn btn-primary btn-sm" data-open-drawer="upload-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Upload</button>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs" data-tabs>
+        <button class="tab active">All<span class="count">2,418</span></button>
+        <button class="tab">Recent</button>
+        <button class="tab">Shared with me</button>
+        <button class="tab">Pending<span class="count">24</span></button>
+        <button class="tab">Drafts</button>
+        <button class="tab">My uploads</button>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="row mb-4" style="align-items:center; flex-wrap:wrap;">
+        <span class="overline" style="margin-right:6px;">Filters</span>
+        <div class="chips">
+          <button class="chip active" data-toggle>Department: All
+            <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <button class="chip" data-toggle>File type
+            <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <button class="chip" data-toggle>Date: Last 30 days
+            <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <button class="chip" data-toggle>Status: All</button>
+          <button class="chip" data-toggle>Owner</button>
+          <button class="chip" data-toggle>Tags</button>
+          <button class="chip" data-toggle>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            Add filter
+          </button>
+        </div>
+        <button class="btn btn-ghost btn-sm" style="margin-left:auto;">Save view</button>
+      </div>
+
+      <!-- Table -->
+      <div class="table-wrap">
+        <div class="table-toolbar">
+          <label style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-muted);"><span class="check-box"></span>Select all</label>
+          <div class="search-mini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input placeholder="Filter in this view..." />
+          </div>
+          <div class="toolbar-right">
+            <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M7 12h10M11 18h2"/></svg>Sort: Modified</button>
+            <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Columns</button>
+          </div>
+        </div>
+
+        <table class="data">
+          <thead>
+            <tr>
+              <th class="check"><input type="checkbox" /></th>
+              <th>Document</th>
+              <th>Category</th>
+              <th>Department</th>
+              <th>Owner</th>
+              <th>Version</th>
+              <th>Size</th>
+              <th>Status</th>
+              <th>Modified</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon pdf">PDF</div><div><div class="name" data-open-drawer="preview-drawer" style="cursor:pointer;">Annual_Compliance_Report_2025.pdf</div><div class="meta">Auto-tagged · 28 pages</div></div></div></td>
+              <td><span class="badge badge-primary">Compliance</span></td>
+              <td>Legal &amp; Compliance</td>
+              <td><div class="cell-user"><span class="avatar c1">AS</span> Anika Singh</div></td>
+              <td class="mono" style="font-size:12px;">v3.2</td>
+              <td>4.2 MB</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
+              <td class="muted">2 min ago</td>
+              <td>
+                <div class="row-actions">
+                  <button class="tb-icon-btn" data-open-drawer="preview-drawer" title="Preview"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+                  <button class="tb-icon-btn" title="Download"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button>
+                  <button class="tb-icon-btn" title="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon doc">DOC</div><div><div class="name">Grant_Agreement_NABARD_2026.docx</div><div class="meta">Signed · Notarized</div></div></div></td>
+              <td><span class="badge badge-accent">Agreements</span></td>
+              <td>Finance</td>
+              <td><div class="cell-user"><span class="avatar c3">RM</span> Ravi Mehta</div></td>
+              <td class="mono" style="font-size:12px;">v1.0</td>
+              <td>1.8 MB</td>
+              <td><span class="badge badge-warning"><span class="dot"></span>Pending</span></td>
+              <td class="muted">18 min ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon xls">XLS</div><div><div class="name">Field_Survey_Rajasthan_Q2.xlsx</div><div class="meta">Spreadsheet · 6 sheets</div></div></div></td>
+              <td><span class="badge badge-purple">Field Data</span></td>
+              <td>Conservation</td>
+              <td><div class="cell-user"><span class="avatar c2">KP</span> Kavya Patel</div></td>
+              <td class="mono" style="font-size:12px;">v2.1</td>
+              <td>3.5 MB</td>
+              <td><span class="badge badge-info"><span class="dot"></span>In review</span></td>
+              <td class="muted">1 hr ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked /></td>
+              <td><div class="cell-file"><div class="file-icon pdf">PDF</div><div><div class="name">MoU_Govt_Of_Odisha_Signed.pdf</div><div class="meta">Memorandum · 12 pages</div></div></div></td>
+              <td><span class="badge badge-primary">Agreements</span></td>
+              <td>Legal &amp; Compliance</td>
+              <td><div class="cell-user"><span class="avatar c4">SK</span> Sameer Khan</div></td>
+              <td class="mono" style="font-size:12px;">v1.0</td>
+              <td>6.4 MB</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
+              <td class="muted">3 hr ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon zip">ZIP</div><div><div class="name">Watershed_Survey_Maps.zip</div><div class="meta">Archive · 42 files</div></div></div></td>
+              <td><span class="badge badge-purple">Field Data</span></td>
+              <td>Conservation</td>
+              <td><div class="cell-user"><span class="avatar c6">NV</span> Neha Verma</div></td>
+              <td class="mono" style="font-size:12px;">v1.0</td>
+              <td>184 MB</td>
+              <td><span class="badge badge-outline">Draft</span></td>
+              <td class="muted">Yesterday</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon doc">DOC</div><div><div class="name">Board_Meeting_Minutes_Apr2026.docx</div><div class="meta">Minutes · 6 pages</div></div></div></td>
+              <td><span class="badge badge-info">Minutes</span></td>
+              <td>Governance</td>
+              <td><div class="cell-user"><span class="avatar c5">DT</span> Deepak Tiwari</div></td>
+              <td class="mono" style="font-size:12px;">v1.2</td>
+              <td>620 KB</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
+              <td class="muted">2 days ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon pdf">PDF</div><div><div class="name">Vendor_Contract_GreenScape_2026.pdf</div><div class="meta">Contract · 14 pages</div></div></div></td>
+              <td><span class="badge badge-primary">Contracts</span></td>
+              <td>Procurement</td>
+              <td><div class="cell-user"><span class="avatar c3">RM</span> Ravi Mehta</div></td>
+              <td class="mono" style="font-size:12px;">v2.0</td>
+              <td>2.1 MB</td>
+              <td><span class="badge badge-warning"><span class="dot"></span>Pending</span></td>
+              <td class="muted">2 days ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon img">IMG</div><div><div class="name">Site_Inspection_Photos_Telangana.zip</div><div class="meta">Images · 128 files</div></div></div></td>
+              <td><span class="badge badge-purple">Media</span></td>
+              <td>Conservation</td>
+              <td><div class="cell-user"><span class="avatar c2">KP</span> Kavya Patel</div></td>
+              <td class="mono" style="font-size:12px;">v1.0</td>
+              <td>312 MB</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
+              <td class="muted">3 days ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon pdf">PDF</div><div><div class="name">Audit_Report_Internal_Q1_2026.pdf</div><div class="meta">Audit · 42 pages</div></div></div></td>
+              <td><span class="badge badge-primary">Compliance</span></td>
+              <td>Internal Audit</td>
+              <td><div class="cell-user"><span class="avatar c1">AS</span> Anika Singh</div></td>
+              <td class="mono" style="font-size:12px;">v1.1</td>
+              <td>5.8 MB</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Approved</span></td>
+              <td class="muted">4 days ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-file"><div class="file-icon txt">TXT</div><div><div class="name">readme_data_dictionary.md</div><div class="meta">Markdown · Meta</div></div></div></td>
+              <td><span class="badge badge-outline">Reference</span></td>
+              <td>Data Sciences</td>
+              <td><div class="cell-user"><span class="avatar c4">VM</span> Vikram Mehra</div></td>
+              <td class="mono" style="font-size:12px;">v1.0</td>
+              <td>32 KB</td>
+              <td><span class="badge badge-outline">Draft</span></td>
+              <td class="muted">1 week ago</td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span>Showing 1–10 of 2,418 documents</span>
+          <div class="pages">
+            <button>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>…</button>
+            <button>242</button>
+            <button>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Document preview drawer -->
+<div class="drawer-overlay" data-for="preview-drawer"></div>
+<aside class="drawer" id="preview-drawer" style="width:560px;">
+  <div class="drawer-head">
+    <div style="display:flex; gap:12px; align-items:center;">
+      <div class="file-icon pdf" style="width:40px; height:40px;">PDF</div>
+      <div><h3 style="font-size:15px;">Annual_Compliance_Report_2025.pdf</h3><div class="caption">4.2 MB · v3.2 · Modified 2 min ago</div></div>
+    </div>
+    <button class="tb-icon-btn" data-close-drawer><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div data-tabs class="tabs" style="margin: 0 20px;">
+    <button class="tab active">Preview</button>
+    <button class="tab">Metadata</button>
+    <button class="tab">Versions <span class="count">7</span></button>
+    <button class="tab">Activity</button>
+    <button class="tab">Permissions</button>
+  </div>
+  <div class="drawer-body" style="padding-top:0; background: var(--surface-2);">
+    <!-- Faux PDF preview -->
+    <div style="background:#fff; border:1px solid var(--border); border-radius:8px; padding: 28px; box-shadow: var(--sh-2); margin-bottom: 16px;">
+      <div style="text-align:center; margin-bottom: 24px;">
+        <div style="font-size:11px; letter-spacing: .08em; color:var(--text-soft); text-transform: uppercase;">Foundation for Ecological Security</div>
+        <h2 style="font-size:18px; margin: 8px 0 4px;">Annual Compliance Report 2025</h2>
+        <div class="caption">Filed under section 12A of Income Tax Act, 1961</div>
+      </div>
+      <div style="font-size:12px; line-height:1.6; color:var(--text-muted);">
+        <p><strong style="color:var(--text);">1. Executive Summary</strong><br/>
+        This report consolidates compliance activities undertaken by FES across all operational verticals during the financial year 2024–25. We engaged with 12 state-level institutions and ensured adherence to FCRA, CSR and ecological-governance norms across 642 projects…</p>
+        <p style="margin-top:12px;"><strong style="color:var(--text);">2. Regulatory Audits</strong><br/>
+        Six external audits were completed during the period. All audits returned satisfactory ratings, with two highlighting opportunities for additional disclosures on inter-state grants…</p>
+        <p style="margin-top:12px;"><strong style="color:var(--text);">3. Risk Register</strong><br/>
+        The legal team has refreshed the risk register with 14 new entries. Of these, 3 are categorized as high priority and have been escalated to the executive committee…</p>
+      </div>
+      <div style="text-align:center; margin-top: 28px; color:var(--text-soft); font-size:11px;">Page 1 of 28</div>
+    </div>
+
+    <!-- Quick metadata strip -->
+    <div class="card" style="background:#fff;">
+      <div class="card-body">
+        <h4 style="margin-bottom:12px;">Quick metadata</h4>
+        <div class="grid-2" style="gap:14px 24px;">
+          <div><div class="caption">Owner</div><strong style="font-size:13.5px;">Anika Singh</strong></div>
+          <div><div class="caption">Department</div><strong style="font-size:13.5px;">Legal &amp; Compliance</strong></div>
+          <div><div class="caption">Category</div><strong style="font-size:13.5px;">Compliance · Reports</strong></div>
+          <div><div class="caption">Confidentiality</div><strong style="font-size:13.5px;">Restricted · L3</strong></div>
+          <div><div class="caption">Retention</div><strong style="font-size:13.5px;">Permanent</strong></div>
+          <div><div class="caption">Document ID</div><strong class="mono" style="font-size:12.5px;">FES-LEG-2025-0142</strong></div>
+        </div>
+        <div class="divider"></div>
+        <div class="caption" style="margin-bottom: 6px;">Tags</div>
+        <div class="chips">
+          <span class="chip active">compliance</span>
+          <span class="chip">audit</span>
+          <span class="chip">FY25</span>
+          <span class="chip">board-approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7"/></svg>Archive</button>
+    <button class="btn btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Download</button>
+    <button class="btn btn-primary">Open full view</button>
+  </div>
+</aside>
+
+<!-- Upload drawer (re-used) -->
+<div class="drawer-overlay" data-for="upload-drawer"></div>
+<aside class="drawer" id="upload-drawer">
+  <div class="drawer-head"><div><h3>Upload Documents</h3><div class="caption">Drag &amp; drop or bulk upload</div></div><button class="tb-icon-btn" data-close-drawer><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+  <div class="drawer-body">
+    <div class="dropzone">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div>
+      <h4>Drop files here, or click to browse</h4>
+      <p>Max file size 200 MB · Bulk upload up to 50 files</p>
+    </div>
+
+    <h4 style="margin: 20px 0 10px;">Queue · 3 files</h4>
+    <div class="stack" style="gap:10px;">
+      <div class="card" style="padding: 12px 14px;">
+        <div class="between" style="margin-bottom: 6px;">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <div class="file-icon pdf" style="width:28px; height:28px; font-size:9px;">PDF</div>
+            <div><strong style="font-size:13px;">Contract_Vendor_GreenScape.pdf</strong><div class="caption">2.1 MB</div></div>
+          </div>
+          <span class="badge badge-success"><span class="dot"></span>Complete</span>
+        </div>
+        <div class="progress"><span style="width:100%; background:var(--success);"></span></div>
+      </div>
+      <div class="card" style="padding: 12px 14px;">
+        <div class="between" style="margin-bottom: 6px;">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <div class="file-icon doc" style="width:28px; height:28px; font-size:9px;">DOC</div>
+            <div><strong style="font-size:13px;">Annual_Report_Draft_v3.docx</strong><div class="caption">1.8 MB · 64%</div></div>
+          </div>
+          <span class="badge badge-info"><span class="dot"></span>Uploading</span>
+        </div>
+        <div class="progress"><span style="width:64%;"></span></div>
+      </div>
+      <div class="card" style="padding: 12px 14px;">
+        <div class="between" style="margin-bottom: 6px;">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <div class="file-icon xls" style="width:28px; height:28px; font-size:9px;">XLS</div>
+            <div><strong style="font-size:13px;">Budget_FY2026.xlsx</strong><div class="caption">3.5 MB · Queued</div></div>
+          </div>
+          <span class="badge badge-outline">Waiting</span>
+        </div>
+        <div class="progress"><span style="width:0%;"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-secondary" data-close-drawer>Cancel</button>
+    <button class="btn btn-primary">Continue with metadata →</button>
+  </div>
+</aside>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design System · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+<style>
+  .ds-section { margin-bottom: 48px; }
+  .ds-section h2 { margin-bottom: 4px; }
+  .ds-section .ds-desc { color: var(--text-subtle); margin-bottom: 20px; font-size: 14px; }
+
+  .ds-swatch { background:#fff; border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow: var(--sh-1); }
+  .ds-swatch .color { height: 80px; }
+  .ds-swatch .meta { padding: 10px 12px; }
+  .ds-swatch .meta strong { font-size: 12.5px; display:block; }
+  .ds-swatch .meta code { font-family: var(--mono); font-size: 11px; color: var(--text-subtle); }
+
+  .ds-type-row { padding: 14px 0; border-bottom: 1px solid var(--border); display:grid; grid-template-columns: 140px 1fr 120px; gap: 16px; align-items: baseline; }
+  .ds-type-row:last-child { border-bottom: 0; }
+  .ds-type-row .lbl { color: var(--text-subtle); font-size: 12.5px; }
+  .ds-type-row code { font-family: var(--mono); font-size: 11.5px; color: var(--text-subtle); }
+
+  .ds-elev { padding: 18px; background:#fff; border-radius: 10px; text-align:center; }
+  .ds-elev code { font-family: var(--mono); font-size: 11px; color: var(--text-subtle); }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search components..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm">Open Figma</button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Administration</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Design System</span></div>
+          <h1>FES Enterprise Design System</h1>
+          <p>Foundations, tokens and components powering the FES Repository product. Version 1.0 · May 2026.</p>
+        </div>
+      </div>
+
+      <!-- COLORS -->
+      <section class="ds-section">
+        <h2>Color System</h2>
+        <p class="ds-desc">Core brand and semantic colors. Use CSS custom properties for consistency across the product.</p>
+        <h4 style="margin-bottom:12px;">Brand</h4>
+        <div class="grid-4 mb-6">
+          <div class="ds-swatch"><div class="color" style="background:#2563EB"></div><div class="meta"><strong>Primary</strong><code>#2563EB · --primary</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#0F172A"></div><div class="meta"><strong>Secondary</strong><code>#0F172A · --secondary</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#14B8A6"></div><div class="meta"><strong>Accent</strong><code>#14B8A6 · --accent</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#7C3AED"></div><div class="meta"><strong>Tertiary</strong><code>#7C3AED · --purple</code></div></div>
+        </div>
+
+        <h4 style="margin-bottom:12px;">Surface &amp; Border</h4>
+        <div class="grid-4 mb-6">
+          <div class="ds-swatch"><div class="color" style="background:#F8FAFC"></div><div class="meta"><strong>Background</strong><code>#F8FAFC · --bg</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#FFFFFF; border-bottom:1px solid var(--border);"></div><div class="meta"><strong>Surface</strong><code>#FFFFFF · --surface</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#F1F5F9"></div><div class="meta"><strong>Surface 2</strong><code>#F1F5F9 · --surface-2</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#E2E8F0"></div><div class="meta"><strong>Border</strong><code>#E2E8F0 · --border</code></div></div>
+        </div>
+
+        <h4 style="margin-bottom:12px;">Semantic</h4>
+        <div class="grid-4">
+          <div class="ds-swatch"><div class="color" style="background:#16A34A"></div><div class="meta"><strong>Success</strong><code>#16A34A · --success</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#F59E0B"></div><div class="meta"><strong>Warning</strong><code>#F59E0B · --warning</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#DC2626"></div><div class="meta"><strong>Danger</strong><code>#DC2626 · --danger</code></div></div>
+          <div class="ds-swatch"><div class="color" style="background:#0EA5E9"></div><div class="meta"><strong>Info</strong><code>#0EA5E9 · --info</code></div></div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="ds-section">
+        <h2>Typography</h2>
+        <p class="ds-desc">Inter font family. Tight letter-spacing on headings, comfortable line-heights on body. JetBrains Mono for IDs and code.</p>
+        <div class="card">
+          <div class="card-body">
+            <div class="ds-type-row"><span class="lbl">H1 · Display</span><h1>The quick brown fox</h1><code>28 / 700</code></div>
+            <div class="ds-type-row"><span class="lbl">H2 · Page</span><h2>The quick brown fox</h2><code>22 / 700</code></div>
+            <div class="ds-type-row"><span class="lbl">H3 · Section</span><h3>The quick brown fox</h3><code>18 / 600</code></div>
+            <div class="ds-type-row"><span class="lbl">H4 · Subsection</span><h4>The quick brown fox</h4><code>15 / 600</code></div>
+            <div class="ds-type-row"><span class="lbl">Body large</span><span class="body-lg">The quick brown fox jumps over the lazy dog.</span><code>15 / 400</code></div>
+            <div class="ds-type-row"><span class="lbl">Body</span><span class="body">The quick brown fox jumps over the lazy dog.</span><code>14 / 400</code></div>
+            <div class="ds-type-row"><span class="lbl">Body small</span><span class="body-sm">The quick brown fox jumps over the lazy dog.</span><code>13 / 400</code></div>
+            <div class="ds-type-row"><span class="lbl">Caption</span><span class="caption">The quick brown fox jumps over the lazy dog.</span><code>12 / 400</code></div>
+            <div class="ds-type-row"><span class="lbl">Overline</span><span class="overline">SECTION LABEL</span><code>11 / 600</code></div>
+            <div class="ds-type-row"><span class="lbl">Mono</span><span class="mono">FES-LEG-2026-0142</span><code>JetBrains Mono</code></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="ds-section">
+        <h2>Buttons</h2>
+        <p class="ds-desc">Five variants × three sizes. Use Primary for the single most important action per view.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">Variants</h4>
+            <div class="row gap-8 mb-6" style="flex-wrap:wrap;">
+              <button class="btn btn-primary">Primary action</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-dark">Dark</button>
+              <button class="btn btn-danger">Destructive</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+            <h4 class="mb-4">Sizes</h4>
+            <div class="row gap-8 mb-6" style="flex-wrap:wrap; align-items:center;">
+              <button class="btn btn-primary btn-lg">Large</button>
+              <button class="btn btn-primary">Medium</button>
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-secondary btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+            <h4 class="mb-4">With icons</h4>
+            <div class="row gap-8" style="flex-wrap:wrap;">
+              <button class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Upload document</button>
+              <button class="btn btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export</button>
+              <button class="btn btn-secondary">Continue<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INPUTS -->
+      <section class="ds-section">
+        <h2>Forms &amp; Inputs</h2>
+        <p class="ds-desc">All form controls, including text, select, search, toggle, checkbox, and radio.</p>
+        <div class="card">
+          <div class="card-body grid-2" style="gap: 24px 32px;">
+            <div class="field"><label>Standard text</label><input class="input" placeholder="Enter text..." /></div>
+            <div class="field"><label>With icon</label>
+              <div class="input-group"><span class="leading"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><input class="input" placeholder="you@fes.org.in" /></div>
+            </div>
+            <div class="field"><label>Select dropdown</label><select class="select"><option>Option one</option><option>Option two</option></select></div>
+            <div class="field"><label>Disabled</label><input class="input" disabled value="Read-only value" style="background:var(--surface-2);" /></div>
+            <div class="field"><label>Error state</label><input class="input" value="Invalid value" style="border-color: var(--danger);" /><div class="err">This field is required.</div></div>
+            <div class="field"><label>With hint</label><input class="input" placeholder="Tag name..." /><div class="hint">Use comma to separate multiple tags.</div></div>
+            <div class="field" style="grid-column: span 2;"><label>Textarea</label><textarea class="textarea" placeholder="Add notes for the reviewer..."></textarea></div>
+
+            <div>
+              <h4 class="mb-4">Toggle &amp; Checkbox</h4>
+              <div class="row" style="gap: 20px; align-items:center; flex-wrap:wrap;">
+                <label style="display:flex; gap:8px; align-items:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label> Toggle on</label>
+                <label style="display:flex; gap:8px; align-items:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label> Toggle off</label>
+                <label style="display:flex; gap:8px; align-items:center;"><span class="check-box checked"></span> Checked</label>
+                <label style="display:flex; gap:8px; align-items:center;"><span class="check-box"></span> Unchecked</label>
+                <label style="display:flex; gap:8px; align-items:center;"><span class="radio-box checked"></span> Radio on</label>
+                <label style="display:flex; gap:8px; align-items:center;"><span class="radio-box"></span> Radio off</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BADGES -->
+      <section class="ds-section">
+        <h2>Badges &amp; Chips</h2>
+        <p class="ds-desc">Use badges for status. Use chips for filters or selectable tags.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">Status badges</h4>
+            <div class="row gap-8 mb-6" style="flex-wrap:wrap;">
+              <span class="badge"><span class="dot"></span>Default</span>
+              <span class="badge badge-success"><span class="dot"></span>Approved</span>
+              <span class="badge badge-warning"><span class="dot"></span>Pending</span>
+              <span class="badge badge-danger"><span class="dot"></span>Blocked</span>
+              <span class="badge badge-info"><span class="dot"></span>In review</span>
+              <span class="badge badge-primary"><span class="dot"></span>New</span>
+              <span class="badge badge-accent"><span class="dot"></span>Active</span>
+              <span class="badge badge-purple"><span class="dot"></span>Special</span>
+              <span class="badge badge-outline">Outline</span>
+            </div>
+            <h4 class="mb-4">Filter chips</h4>
+            <div class="chips">
+              <button class="chip active" data-toggle>Active chip</button>
+              <button class="chip" data-toggle>Inactive chip</button>
+              <button class="chip" data-toggle>+ Add filter</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ELEVATION -->
+      <section class="ds-section">
+        <h2>Elevation</h2>
+        <p class="ds-desc">Five-level shadow ramp. Use lower elevations for surface differentiation; higher for floating elements.</p>
+        <div class="grid-4" style="background:var(--bg); padding: 24px; border-radius: 12px;">
+          <div class="ds-elev" style="box-shadow: var(--sh-1);"><strong>Elevation 1</strong><br/><code>--sh-1</code><br/>cards</div>
+          <div class="ds-elev" style="box-shadow: var(--sh-2);"><strong>Elevation 2</strong><br/><code>--sh-2</code><br/>hover</div>
+          <div class="ds-elev" style="box-shadow: var(--sh-3);"><strong>Elevation 3</strong><br/><code>--sh-3</code><br/>popovers</div>
+          <div class="ds-elev" style="box-shadow: var(--sh-4);"><strong>Elevation 4</strong><br/><code>--sh-4</code><br/>modals</div>
+        </div>
+      </section>
+
+      <!-- RADIUS / SPACING -->
+      <section class="ds-section">
+        <h2>Radius &amp; Spacing</h2>
+        <p class="ds-desc">8-pixel rounded corners for most controls. 12–16 px for cards. 4-pt spacing scale.</p>
+        <div class="grid-3 mb-6">
+          <div class="card" style="padding: 18px; text-align:center;"><div style="width:80px; height:80px; background:var(--primary-50); border:1px solid var(--primary-100); border-radius:6px; margin: 0 auto 10px;"></div><strong>Small · 6 px</strong><div class="caption">inputs, chips</div></div>
+          <div class="card" style="padding: 18px; text-align:center;"><div style="width:80px; height:80px; background:var(--primary-50); border:1px solid var(--primary-100); border-radius:12px; margin: 0 auto 10px;"></div><strong>Medium · 12 px</strong><div class="caption">cards, panels</div></div>
+          <div class="card" style="padding: 18px; text-align:center;"><div style="width:80px; height:80px; background:var(--primary-50); border:1px solid var(--primary-100); border-radius:20px; margin: 0 auto 10px;"></div><strong>Large · 20 px</strong><div class="caption">surfaces, hero</div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">Spacing scale (4-pt)</h4>
+            <div class="stack" style="gap: 8px;">
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-1 · 4</code><div style="height:8px; width:4px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-2 · 8</code><div style="height:8px; width:8px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-3 · 12</code><div style="height:8px; width:12px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-4 · 16</code><div style="height:8px; width:16px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-6 · 24</code><div style="height:8px; width:24px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-8 · 32</code><div style="height:8px; width:32px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-12 · 48</code><div style="height:8px; width:48px; background:var(--primary);"></div></div>
+              <div style="display:flex; gap:12px; align-items:center;"><code style="width:60px;">s-16 · 64</code><div style="height:8px; width:64px; background:var(--primary);"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ICONS / AVATARS -->
+      <section class="ds-section">
+        <h2>Icons &amp; Avatars</h2>
+        <p class="ds-desc">File-type icons, semantic icons and color-coded avatars.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">File types</h4>
+            <div class="row gap-8 mb-6" style="flex-wrap:wrap;">
+              <div class="file-icon pdf">PDF</div>
+              <div class="file-icon doc">DOC</div>
+              <div class="file-icon xls">XLS</div>
+              <div class="file-icon img">IMG</div>
+              <div class="file-icon zip">ZIP</div>
+              <div class="file-icon txt">TXT</div>
+            </div>
+            <h4 class="mb-4">Avatars</h4>
+            <div class="row gap-8" style="flex-wrap:wrap; align-items:center;">
+              <div class="avatar c1">PS</div>
+              <div class="avatar c2">KP</div>
+              <div class="avatar c3">RM</div>
+              <div class="avatar c4">SK</div>
+              <div class="avatar c5">DT</div>
+              <div class="avatar c6">NV</div>
+              <div class="avatar lg c1">PS</div>
+              <div class="avatar xl c4">SK</div>
+              <div style="display:flex;">
+                <div class="avatar c1">A</div>
+                <div class="avatar c2" style="margin-left:-8px; border:2px solid #fff;">B</div>
+                <div class="avatar c3" style="margin-left:-8px; border:2px solid #fff;">C</div>
+                <div class="avatar c4" style="margin-left:-8px; border:2px solid #fff;">D</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRESS / STORAGE -->
+      <section class="ds-section">
+        <h2>Progress &amp; Bars</h2>
+        <div class="card">
+          <div class="card-body stack" style="gap: 14px;">
+            <div><div class="caption" style="margin-bottom: 4px;">Linear progress</div><div class="progress"><span style="width:42%;"></span></div></div>
+            <div><div class="caption" style="margin-bottom: 4px;">Storage stack (multi-segment)</div>
+              <div class="storage-bar"><span style="width:42%; background:var(--primary);"></span><span style="width:18%; background:var(--accent);"></span><span style="width:8%; background:var(--warning);"></span></div>
+            </div>
+            <div><div class="caption" style="margin-bottom: 4px;">Sparkline</div>
+              <div class="spark" style="height:48px; width:200px;"><span style="height:30%"></span><span style="height:60%"></span><span style="height:40%"></span><span style="height:80%"></span><span style="height:55%"></span><span class="hi" style="height:90%"></span><span style="height:70%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TABS / DROPZONE / TIMELINE -->
+      <section class="ds-section">
+        <h2>Tabs · Upload Zone · Timeline</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="tabs" data-tabs>
+                <button class="tab active">Overview<span class="count">12</span></button>
+                <button class="tab">Activity</button>
+                <button class="tab">Members</button>
+              </div>
+              <p class="muted">Tab panel content. Switch above.</p>
+              <h4 class="mt-6 mb-4">Upload zone</h4>
+              <div class="dropzone">
+                <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div>
+                <h4>Drop files here</h4>
+                <p>PDF, DOCX, XLSX up to 200 MB</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4">Timeline</h4>
+              <div class="timeline">
+                <div class="tl-item"><span class="tl-dot success"></span><div class="tl-content"><div class="head"><div class="title">Document approved</div><span class="time">2m</span></div><div class="desc">By Anika Singh</div></div></div>
+                <div class="tl-item"><span class="tl-dot"></span><div class="tl-content"><div class="head"><div class="title">Document uploaded</div><span class="time">18m</span></div><div class="desc">By Ravi Mehta</div></div></div>
+                <div class="tl-item"><span class="tl-dot warning"></span><div class="tl-content"><div class="head"><div class="title">SLA approaching</div><span class="time">42m</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot danger"></span><div class="tl-content"><div class="head"><div class="title">Permission blocked</div><span class="time">2h</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot muted"></span><div class="tl-content"><div class="head"><div class="title">Document archived</div><span class="time">3h</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMPTY / SKELETON -->
+      <section class="ds-section">
+        <h2>States</h2>
+        <p class="ds-desc">Empty, loading and error feedback patterns.</p>
+        <div class="grid-2">
+          <div class="card">
+            <div class="empty">
+              <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+              <h3>No documents yet</h3>
+              <p>Upload your first document to get started, or invite team members to add files.</p>
+              <button class="btn btn-primary btn-sm">Upload document</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4">Loading skeleton</h4>
+              <div class="stack" style="gap: 10px;">
+                <div class="skel" style="height: 16px; width: 70%;"></div>
+                <div class="skel" style="height: 12px; width: 100%;"></div>
+                <div class="skel" style="height: 12px; width: 92%;"></div>
+                <div class="skel" style="height: 12px; width: 86%;"></div>
+                <div style="display:flex; gap:10px; margin-top: 10px;">
+                  <div class="skel" style="height: 36px; width: 36px; border-radius: 50%;"></div>
+                  <div style="flex:1;">
+                    <div class="skel" style="height: 14px; width: 40%; margin-bottom: 6px;"></div>
+                    <div class="skel" style="height: 12px; width: 70%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL / TRIGGERS -->
+      <section class="ds-section">
+        <h2>Overlays</h2>
+        <p class="ds-desc">Modal and drawer triggers. Open to preview interactions.</p>
+        <div class="card">
+          <div class="card-body row gap-8">
+            <button class="btn btn-primary" data-open-modal="demo-modal">Open modal</button>
+            <button class="btn btn-secondary" data-open-drawer="demo-drawer">Open drawer</button>
+          </div>
+        </div>
+      </section>
+
+      <p class="caption text-center mt-8" style="padding-top: 24px; border-top: 1px solid var(--border);">
+        FES Enterprise Design System · v1.0 · Built for the Foundation for Ecological Security · May 2026
+      </p>
+    </main>
+  </div>
+</div>
+
+<!-- Demo modal -->
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Confirm action</h3>
+      <p>This is a demonstration of the standard modal component.</p>
+    </div>
+    <div class="modal-body">
+      <p class="muted">Modals are for confirmations, focused tasks or interruptions that require explicit dismissal. They block the underlying interface.</p>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" data-close-modal>Cancel</button>
+      <button class="btn btn-primary" data-close-modal>Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Demo drawer -->
+<div class="drawer-overlay" data-for="demo-drawer"></div>
+<aside class="drawer" id="demo-drawer">
+  <div class="drawer-head"><div><h3>Demo drawer</h3><div class="caption">Right-side overlay for contextual workflows</div></div><button class="tb-icon-btn" data-close-drawer><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+  <div class="drawer-body">
+    <p class="muted">Drawers are for secondary workflows that benefit from context preservation — preview panes, filters, forms.</p>
+    <div class="stack mt-4">
+      <div class="field"><label>Field one</label><input class="input" placeholder="Type here..." /></div>
+      <div class="field"><label>Field two</label><select class="select"><option>Option A</option></select></div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-secondary" data-close-drawer>Cancel</button>
+    <button class="btn btn-primary">Save</button>
+  </div>
+</aside>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

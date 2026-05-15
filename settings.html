@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search settings..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Administration</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Settings</span></div>
+          <h1>Workspace Settings</h1>
+          <p>Configure your FES Repository — security, branding, integrations and policies.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 240px 1fr; gap: 32px; align-items:flex-start;">
+        <!-- Settings nav -->
+        <nav class="card" style="padding: 8px;">
+          <a href="#general" class="nav-link active" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span class="nav-label">General</span>
+          </a>
+          <a href="#security" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <span class="nav-label">Security</span>
+          </a>
+          <a href="#auth" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 1l8 4v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-4z"/></svg>
+            <span class="nav-label">Authentication</span>
+          </a>
+          <a href="#storage" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span class="nav-label">Storage &amp; Backup</span>
+          </a>
+          <a href="#notifs" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg>
+            <span class="nav-label">Notifications</span>
+          </a>
+          <a href="#integrations" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+            <span class="nav-label">Integrations</span>
+          </a>
+          <a href="#branding" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg>
+            <span class="nav-label">Branding</span>
+          </a>
+          <a href="#api" class="nav-link" style="padding: 10px 12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="nav-label">API &amp; Webhooks</span>
+          </a>
+        </nav>
+
+        <!-- Settings content -->
+        <div class="stack" style="gap: 24px;">
+
+          <!-- General -->
+          <div class="card" id="general">
+            <div class="card-head">
+              <div><h3>General · Repository Configuration</h3><div class="sub">Basic workspace and organizational settings</div></div>
+            </div>
+            <div class="card-body">
+              <div class="grid-2" style="gap:16px;">
+                <div class="field"><label>Workspace name</label><input class="input" value="FES Repository" /></div>
+                <div class="field"><label>Organization</label><input class="input" value="Foundation for Ecological Security" /></div>
+                <div class="field"><label>Primary contact</label><input class="input" value="priya.sharma@fes.org.in" /></div>
+                <div class="field"><label>Time zone</label>
+                  <select class="select"><option>India Standard Time (UTC+5:30)</option><option>UTC</option></select>
+                </div>
+                <div class="field"><label>Default language</label>
+                  <select class="select"><option>English (India)</option><option>Hindi</option><option>Telugu</option></select>
+                </div>
+                <div class="field"><label>Date format</label>
+                  <select class="select"><option>DD MMM YYYY</option><option>YYYY-MM-DD</option></select>
+                </div>
+              </div>
+            </div>
+            <div class="card-foot"><span>Last updated by Priya · 3 days ago</span>
+              <div class="row gap-8"><button class="btn btn-secondary btn-sm">Reset</button><button class="btn btn-primary btn-sm">Save changes</button></div>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="card" id="security">
+            <div class="card-head"><div><h3>Security</h3><div class="sub">Protect your workspace with strong controls</div></div></div>
+            <div style="padding: 0;">
+              <div class="between" style="padding: 16px 20px; border-bottom: 1px solid var(--border);">
+                <div><strong>Enforce 2FA for all users</strong><div class="caption">Require authenticator-app verification on every sign-in</div></div>
+                <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="between" style="padding: 16px 20px; border-bottom: 1px solid var(--border);">
+                <div><strong>SSO via Microsoft Entra ID</strong><div class="caption">Domain: fes.org.in · Auto-provisioning enabled</div></div>
+                <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="between" style="padding: 16px 20px; border-bottom: 1px solid var(--border);">
+                <div><strong>IP allow-list</strong><div class="caption">Restrict access to 4 approved corporate IP ranges</div></div>
+                <button class="btn btn-secondary btn-sm">Configure (4)</button>
+              </div>
+              <div class="between" style="padding: 16px 20px; border-bottom: 1px solid var(--border);">
+                <div><strong>Session timeout</strong><div class="caption">Automatically sign out idle users</div></div>
+                <select class="select" style="width:auto; height:36px;"><option>30 minutes</option><option>1 hour</option><option>4 hours</option></select>
+              </div>
+              <div class="between" style="padding: 16px 20px;">
+                <div><strong>Watermark sensitive previews</strong><div class="caption">Stamp viewer name &amp; timestamp on confidential documents</div></div>
+                <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Authentication -->
+          <div class="card" id="auth">
+            <div class="card-head"><div><h3>Authentication providers</h3><div class="sub">Configure SSO and identity providers</div></div></div>
+            <div class="card-body">
+              <div class="stack" style="gap:10px;">
+                <div class="between" style="padding: 14px 16px; background:var(--surface-2); border-radius:10px;">
+                  <div style="display:flex; gap:12px; align-items:center;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:#fff; display:grid; place-items:center; box-shadow: var(--sh-1);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0078D4"><path d="M11.4 11.4H1V1h10.4v10.4zM23 11.4H12.6V1H23v10.4zM11.4 23H1V12.6h10.4V23zM23 23H12.6V12.6H23V23z"/></svg>
+                    </div>
+                    <div><strong>Microsoft Entra ID (Azure AD)</strong><div class="caption">Primary · 384 mapped users</div></div>
+                  </div>
+                  <span class="badge badge-success"><span class="dot"></span>Connected</span>
+                </div>
+                <div class="between" style="padding: 14px 16px; background:var(--surface-2); border-radius:10px;">
+                  <div style="display:flex; gap:12px; align-items:center;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:#fff; display:grid; place-items:center; box-shadow: var(--sh-1);">
+                      <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.75h3.57c2.08-1.92 3.22-4.74 3.22-8.07z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.75c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.12A6.6 6.6 0 015.5 12c0-.74.13-1.45.34-2.12V7.04H2.18a11 11 0 000 9.92l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.04l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+                    </div>
+                    <div><strong>Google Workspace</strong><div class="caption">Available for fes-foundation.org domain</div></div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm">Connect</button>
+                </div>
+                <div class="between" style="padding: 14px 16px; background:var(--surface-2); border-radius:10px;">
+                  <div style="display:flex; gap:12px; align-items:center;">
+                    <div style="width:36px; height:36px; border-radius:8px; background:#fff; display:grid; place-items:center; box-shadow: var(--sh-1); color:var(--text-muted);">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <div><strong>SAML 2.0</strong><div class="caption">For custom identity providers</div></div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm">Configure</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Storage & Backup -->
+          <div class="card" id="storage">
+            <div class="card-head"><div><h3>Storage &amp; Backup</h3><div class="sub">3.42 TB of 5 TB used</div></div><button class="btn btn-primary btn-sm">Upgrade plan</button></div>
+            <div class="card-body">
+              <div class="storage-bar" style="height: 16px; margin-bottom: 12px;">
+                <span style="width:42%; background:var(--primary);"></span>
+                <span style="width:18%; background:var(--accent);"></span>
+                <span style="width:8%;  background:var(--warning);"></span>
+              </div>
+              <div class="row" style="gap:24px; font-size:13px;">
+                <span class="legend-item"><span class="swatch" style="background:#2563EB"></span>Documents · 1.45 TB</span>
+                <span class="legend-item"><span class="swatch" style="background:#14B8A6"></span>Legal · 0.62 TB</span>
+                <span class="legend-item"><span class="swatch" style="background:#F59E0B"></span>Media · 0.28 TB</span>
+              </div>
+              <div class="divider"></div>
+              <div class="grid-2">
+                <div class="field"><label>Storage region</label><select class="select"><option>India (Mumbai · ap-south-1)</option></select></div>
+                <div class="field"><label>Encryption</label><select class="select"><option>AES-256 (managed)</option><option>AES-256 (BYOK)</option></select></div>
+                <div class="field"><label>Backup frequency</label><select class="select"><option>Hourly + daily snapshot</option></select></div>
+                <div class="field"><label>Last backup</label><input class="input" value="May 13, 2026 · 2:00 PM IST" disabled style="background:var(--surface-2);" /></div>
+              </div>
+              <div class="between mt-4" style="padding: 12px 14px; background:var(--success-50); border-radius:10px; border:1px solid #BBF7D0;">
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <div style="font-size:13px; color:#166534;"><strong>Backups healthy</strong> · 7-day rolling history</div>
+                </div>
+                <button class="btn btn-secondary btn-sm">Restore from backup</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="card" id="notifs">
+            <div class="card-head"><div><h3>Notification preferences</h3><div class="sub">Default channels for workspace alerts</div></div></div>
+            <div style="overflow:hidden;">
+              <table class="data">
+                <thead>
+                  <tr><th>Event</th><th style="text-align:center;">In-app</th><th style="text-align:center;">Email</th><th style="text-align:center;">SMS</th><th style="text-align:center;">Slack/Teams</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Document uploaded</td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td></tr>
+                  <tr><td>Approval required</td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td></tr>
+                  <tr><td>Security event</td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td></tr>
+                  <tr><td>Storage 80% threshold</td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td></tr>
+                  <tr><td>Weekly digest</td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td><td style="text-align:center;"><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="card" id="integrations">
+            <div class="card-head"><div><h3>Integrations</h3><div class="sub">Connect FES Repository to your stack</div></div><button class="btn btn-secondary btn-sm">Browse all (24)</button></div>
+            <div class="card-body">
+              <div class="grid-3" style="gap:12px;">
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>Microsoft Teams</strong><span class="badge badge-success"><span class="dot"></span>Active</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">Real-time alerts to #fes-legal channel</div>
+                  <button class="btn btn-secondary btn-sm">Configure</button>
+                </div>
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>Slack</strong><span class="badge"><span class="dot"></span>Available</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">Workspace notifications and bot</div>
+                  <button class="btn btn-secondary btn-sm">Connect</button>
+                </div>
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>DocuSign</strong><span class="badge badge-success"><span class="dot"></span>Active</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">Send contracts for e-signature</div>
+                  <button class="btn btn-secondary btn-sm">Configure</button>
+                </div>
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>OneDrive</strong><span class="badge"><span class="dot"></span>Available</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">Sync personal documents</div>
+                  <button class="btn btn-secondary btn-sm">Connect</button>
+                </div>
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>Zapier</strong><span class="badge badge-success"><span class="dot"></span>Active</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">8 active automations</div>
+                  <button class="btn btn-secondary btn-sm">Manage</button>
+                </div>
+                <div style="padding: 14px 16px; border:1px solid var(--border); border-radius:10px;">
+                  <div class="between"><strong>Power BI</strong><span class="badge"><span class="dot"></span>Available</span></div>
+                  <div class="caption" style="margin: 8px 0 12px;">Embed dashboards and reports</div>
+                  <button class="btn btn-secondary btn-sm">Connect</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branding -->
+          <div class="card" id="branding">
+            <div class="card-head"><div><h3>Branding</h3><div class="sub">Customize colors, logo and email templates</div></div></div>
+            <div class="card-body">
+              <div class="grid-2" style="gap:24px; align-items:flex-start;">
+                <div class="stack">
+                  <div class="field"><label>Workspace logo</label>
+                    <div style="display:flex; gap:12px; align-items:center;">
+                      <div class="sb-logo" style="width:56px; height:56px; font-size:20px;">FE</div>
+                      <button class="btn btn-secondary btn-sm">Upload new logo</button>
+                      <button class="btn btn-ghost btn-sm">Remove</button>
+                    </div>
+                    <div class="hint">PNG or SVG · Min 64×64 px · Max 1 MB</div>
+                  </div>
+                  <div class="field"><label>Primary color</label>
+                    <div style="display:flex; gap:8px; align-items:center;">
+                      <div style="width:36px; height:36px; border-radius:8px; background:#2563EB; border:1px solid var(--border);"></div>
+                      <input class="input" value="#2563EB" style="flex:1;" />
+                    </div>
+                  </div>
+                  <div class="field"><label>Accent color</label>
+                    <div style="display:flex; gap:8px; align-items:center;">
+                      <div style="width:36px; height:36px; border-radius:8px; background:#14B8A6; border:1px solid var(--border);"></div>
+                      <input class="input" value="#14B8A6" style="flex:1;" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="caption" style="margin-bottom: 8px;">Preview</div>
+                  <div style="border:1px solid var(--border); border-radius:12px; padding: 16px; background: var(--bg);">
+                    <div style="display:flex; gap:10px; align-items:center; margin-bottom: 14px;">
+                      <div class="sb-logo">FE</div>
+                      <div>
+                        <strong style="font-size:13px;">FES Repository</strong>
+                        <div class="caption">Document &amp; Legal DMS</div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm" style="margin-right:6px;">Primary button</button>
+                    <button class="btn btn-secondary btn-sm">Secondary</button>
+                    <div style="margin-top:12px;">
+                      <span class="badge badge-primary">Tag</span>
+                      <span class="badge badge-accent">Accent</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- API -->
+          <div class="card" id="api">
+            <div class="card-head"><div><h3>API &amp; Webhooks</h3><div class="sub">Programmatic access for integrations</div></div></div>
+            <div class="card-body">
+              <h4 style="margin-bottom:10px;">API Keys</h4>
+              <div style="overflow:hidden; border: 1px solid var(--border); border-radius:8px;">
+                <table class="data">
+                  <thead><tr><th>Name</th><th>Token</th><th>Scope</th><th>Last used</th><th></th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Power BI Connector</strong><div class="caption">created Apr 12</div></td>
+                      <td><code class="mono" style="font-size:11.5px;">sk_live_••••••••6f4c</code></td>
+                      <td><span class="badge badge-info">Read</span></td>
+                      <td class="muted">12 min ago</td>
+                      <td><button class="btn btn-ghost btn-sm">Revoke</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Zapier integration</strong><div class="caption">created Mar 02</div></td>
+                      <td><code class="mono" style="font-size:11.5px;">sk_live_••••••••a8e1</code></td>
+                      <td><span class="badge badge-primary">Read · Write</span></td>
+                      <td class="muted">2 hr ago</td>
+                      <td><button class="btn btn-ghost btn-sm">Revoke</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Internal analytics</strong><div class="caption">created Jan 18</div></td>
+                      <td><code class="mono" style="font-size:11.5px;">sk_live_••••••••d2c0</code></td>
+                      <td><span class="badge badge-info">Read</span></td>
+                      <td class="muted">Yesterday</td>
+                      <td><button class="btn btn-ghost btn-sm">Revoke</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="btn btn-secondary btn-sm mt-4">+ Generate new key</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

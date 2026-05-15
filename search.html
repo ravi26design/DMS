@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Search · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg><span class="nav-label">Upload Center</span></a>
+        <a href="search.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Quick search" /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Upload</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Workspace</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Advanced Search</span></div>
+          <h1>Advanced Search</h1>
+          <p>Natural-language &amp; structured search across your full document archive.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>Saved searches (8)</button>
+          <button class="btn btn-secondary btn-sm">Query builder</button>
+        </div>
+      </div>
+
+      <!-- Big search bar -->
+      <div style="background:linear-gradient(135deg, #fff, #F8FAFC); border:1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: var(--sh-2);">
+        <div style="position:relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute; left:18px; top:50%; transform:translateY(-50%); color:var(--primary);"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input class="input" style="height:56px; padding-left:52px; padding-right:140px; font-size:16px; border-radius: 12px;" value="watershed agreement signed by Telangana government FY26" />
+          <div style="position:absolute; right:8px; top:50%; transform:translateY(-50%); display:flex; gap:6px; align-items:center;">
+            <button class="btn btn-ghost btn-sm" title="AI search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.5 5L20 9l-4 4 1 6-5-2.5L7 19l1-6-4-4 5.5-1L12 3z"/></svg>
+              AI
+            </button>
+            <button class="btn btn-primary">Search</button>
+          </div>
+        </div>
+
+        <!-- Filters row -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+          <select class="select" style="height:36px; width:auto; padding-right:32px;">
+            <option>📂 All sections</option><option>Documents</option><option>Legal</option><option>Archive</option>
+          </select>
+          <select class="select" style="height:36px; width:auto; padding-right:32px;">
+            <option>📄 Any file type</option><option>PDF</option><option>DOCX</option><option>XLSX</option>
+          </select>
+          <select class="select" style="height:36px; width:auto; padding-right:32px;">
+            <option>🏢 Any department</option><option>Legal &amp; Compliance</option><option>Conservation</option>
+          </select>
+          <button class="btn btn-secondary btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Apr 1 – May 13, 2026
+          </button>
+          <button class="btn btn-secondary btn-sm">Owner: Any</button>
+          <button class="btn btn-secondary btn-sm">Status: Any</button>
+          <button class="btn btn-ghost btn-sm" style="margin-left:auto;">Clear all</button>
+        </div>
+
+        <!-- Suggestions -->
+        <div style="margin-top: 14px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <span class="caption">Try:</span>
+          <button class="chip" data-toggle>contracts expiring in 30 days</button>
+          <button class="chip" data-toggle>compliance filings · FY25</button>
+          <button class="chip" data-toggle>uploaded by Anika Singh</button>
+          <button class="chip" data-toggle>cases tagged "watershed"</button>
+        </div>
+      </div>
+
+      <!-- Result summary bar -->
+      <div class="between mt-6 mb-4">
+        <div>
+          <strong style="font-size:15px;">142 results</strong>
+          <span class="caption" style="margin-left:8px;">in 0.21s · 5 highly relevant</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <span class="caption">Sort by</span>
+          <select class="select" style="height:34px; width:auto;">
+            <option>Relevance</option><option>Most recent</option><option>Most viewed</option>
+          </select>
+          <button class="btn btn-secondary btn-sm">Save this search</button>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <!-- Results -->
+        <div class="stack">
+          <div class="search-result">
+            <div class="file-icon pdf">PDF</div>
+            <div class="body">
+              <div class="between">
+                <h4>Watershed Restoration <mark>Agreement</mark> · Govt. of Telangana</h4>
+                <span class="score"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.5 5L20 9l-4 4 1 6-5-2.5L7 19l1-6-4-4 5.5-1L12 3z"/></svg>98%</span>
+              </div>
+              <div class="snippet">…three-year framework <mark>agreement</mark> for joint <mark>watershed</mark> restoration projects across 18 districts in <mark>Telangana</mark>, signed under MGNREGA convergence. Signatories include Secretary, Rural Development and Director, FES…</div>
+              <div class="meta-row">
+                <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>Legal · Agreements</span>
+                <span>Anika Singh</span>
+                <span>Apr 28, 2026</span>
+                <span class="badge badge-success" style="padding:1px 6px;">Approved</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-result">
+            <div class="file-icon doc">DOC</div>
+            <div class="body">
+              <div class="between">
+                <h4>Cabinet Note on <mark>Watershed</mark> Convergence</h4>
+                <span class="score">94%</span>
+              </div>
+              <div class="snippet">…cabinet note approved with conditions on quarterly reviews and beneficiary reporting. The <mark>government</mark> of <mark>Telangana</mark> shall provide matching contribution of 30% from rural development budget…</div>
+              <div class="meta-row">
+                <span>Legal · Compliance</span>
+                <span>Anika Singh</span>
+                <span>Apr 18, 2026</span>
+                <span class="badge badge-info" style="padding:1px 6px;">Reference</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-result">
+            <div class="file-icon pdf">PDF</div>
+            <div class="body">
+              <div class="between">
+                <h4>NABARD Grant <mark>Agreement</mark> <mark>FY26</mark></h4>
+                <span class="score">88%</span>
+              </div>
+              <div class="snippet">…multi-year grant <mark>agreement</mark> covering 1,400 hectares of natural-farming demonstration plots across Andhra Pradesh, <mark>Telangana</mark> and Karnataka under the JIVA programme…</div>
+              <div class="meta-row">
+                <span>Finance · Grants</span>
+                <span>Ravi Mehta</span>
+                <span>Feb 14, 2026</span>
+                <span class="badge badge-success" style="padding:1px 6px;">Final</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-result">
+            <div class="file-icon xls">XLS</div>
+            <div class="body">
+              <div class="between">
+                <h4>Beneficiary Districts &amp; Budget Allocation · <mark>Telangana</mark></h4>
+                <span class="score">82%</span>
+              </div>
+              <div class="snippet">…spreadsheet listing 18 beneficiary districts in <mark>Telangana</mark> with their respective budget allocations, project leads and indicative timelines tied to the <mark>watershed</mark> framework <mark>agreement</mark>…</div>
+              <div class="meta-row">
+                <span>Conservation · Field Data</span>
+                <span>Kavya Patel</span>
+                <span>Apr 24, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-result">
+            <div class="file-icon pdf">PDF</div>
+            <div class="body">
+              <div class="between">
+                <h4>Counsel Opinion on Indemnity Clauses</h4>
+                <span class="score">75%</span>
+              </div>
+              <div class="snippet">…counsel suggested 3 clause modifications regarding indemnity and dispute resolution for the <mark>watershed</mark> framework <mark>agreement</mark>. References to similar arrangements in Karnataka watershed mission cited…</div>
+              <div class="meta-row">
+                <span>Legal · Opinions</span>
+                <span>External · Mathur &amp; Co.</span>
+                <span>Apr 10, 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right rail -->
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h3>Refine results</h3></div>
+            <div class="card-body" style="padding-top: 14px;">
+              <div class="overline" style="margin-bottom: 8px;">By Department</div>
+              <div class="stack" style="gap:8px;">
+                <label style="display:flex; align-items:center; gap:8px; font-size:13.5px;"><span class="check-box checked"></span>Legal &amp; Compliance <span style="margin-left:auto; color:var(--text-subtle);">68</span></label>
+                <label style="display:flex; align-items:center; gap:8px; font-size:13.5px;"><span class="check-box checked"></span>Finance <span style="margin-left:auto; color:var(--text-subtle);">24</span></label>
+                <label style="display:flex; align-items:center; gap:8px; font-size:13.5px;"><span class="check-box"></span>Conservation <span style="margin-left:auto; color:var(--text-subtle);">31</span></label>
+                <label style="display:flex; align-items:center; gap:8px; font-size:13.5px;"><span class="check-box"></span>Operations <span style="margin-left:auto; color:var(--text-subtle);">19</span></label>
+              </div>
+
+              <div class="divider"></div>
+              <div class="overline" style="margin-bottom: 8px;">File Type</div>
+              <div class="chips">
+                <button class="chip active" data-toggle>PDF · 84</button>
+                <button class="chip active" data-toggle>DOCX · 22</button>
+                <button class="chip" data-toggle>XLSX · 18</button>
+                <button class="chip" data-toggle>ZIP · 8</button>
+              </div>
+
+              <div class="divider"></div>
+              <div class="overline" style="margin-bottom: 8px;">Date</div>
+              <div class="grid-2">
+                <div class="field"><label>From</label><input class="input" value="2026-04-01" /></div>
+                <div class="field"><label>To</label><input class="input" value="2026-05-13" /></div>
+              </div>
+
+              <div class="divider"></div>
+              <div class="overline" style="margin-bottom: 8px;">Confidentiality</div>
+              <div class="chips">
+                <button class="chip" data-toggle>Public</button>
+                <button class="chip active" data-toggle>Internal</button>
+                <button class="chip active" data-toggle>Restricted</button>
+                <button class="chip" data-toggle>Confidential</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>Recent searches</h3></div>
+            <div style="padding: 4px 0;">
+              <a href="#" style="display:flex; gap:10px; padding: 10px 16px; align-items:center; font-size:13.5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                contracts expiring this quarter
+              </a>
+              <a href="#" style="display:flex; gap:10px; padding: 10px 16px; align-items:center; font-size:13.5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                FCRA renewal supporting docs
+              </a>
+              <a href="#" style="display:flex; gap:10px; padding: 10px 16px; align-items:center; font-size:13.5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                MoU Government of Odisha
+              </a>
+              <a href="#" style="display:flex; gap:10px; padding: 10px 16px; align-items:center; font-size:13.5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                audit report Q1
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

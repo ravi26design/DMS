@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Archive · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search archived items..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Governance</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Archive</span></div>
+          <h1>Archive &amp; Restore</h1>
+          <p>6,294 archived documents · 132 due for permanent purge in next 30 days</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary btn-sm">Retention policy</button>
+          <button class="btn btn-secondary btn-sm">Bulk restore</button>
+        </div>
+      </div>
+
+      <!-- Retention banner -->
+      <div style="background: linear-gradient(135deg, #FFFBEB, #FEF3C7); border:1px solid #FDE68A; border-radius:12px; padding: 16px 20px; display:flex; gap:14px; align-items:center; margin-bottom: 24px;">
+        <div style="width:42px; height:42px; border-radius:10px; background:#FFFFFF; display:grid; place-items:center; color:#B45309; flex-shrink:0; box-shadow: var(--sh-1);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+        </div>
+        <div style="flex:1;">
+          <strong style="display:block; color:#92400E; font-size:14.5px;">132 documents scheduled for permanent deletion</strong>
+          <div style="color:#B45309; font-size:13px; margin-top:2px;">These items will be permanently purged in 30 days per retention policy. Review or extend before May 13, 2026 EOD.</div>
+        </div>
+        <button class="btn btn-secondary btn-sm">Review list</button>
+        <button class="btn btn-primary btn-sm">Extend retention</button>
+      </div>
+
+      <!-- KPI -->
+      <div class="kpi-grid mb-6">
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Archived total</div><div class="kpi-value">6,294</div></div><div class="kpi-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg></div></div><div class="kpi-foot"><span>0.21 TB on cold storage</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Restored this month</div><div class="kpi-value">42</div></div><div class="kpi-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15a9 9 0 11-2.13-9.36L23 10"/></svg></div></div><div class="kpi-foot"><span>Avg. 14s restore time</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Due for purge</div><div class="kpi-value">132</div></div><div class="kpi-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div></div><div class="kpi-foot"><span class="badge badge-danger"><span class="dot"></span>30 day window</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Storage reclaimed</div><div class="kpi-value">84 <span style="font-size:14px; font-weight:500; color:var(--text-subtle);">GB</span></div></div><div class="kpi-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div></div><div class="kpi-foot"><span>This quarter</span></div></div>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <button class="tab active">Archived<span class="count">6,294</span></button>
+        <button class="tab">Trash<span class="count">218</span></button>
+        <button class="tab">Scheduled for purge<span class="count">132</span></button>
+        <button class="tab">Retention policies</button>
+      </div>
+
+      <!-- Archive grid: Cards -->
+      <div class="grid-3 mt-4">
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding: 16px; box-shadow: var(--sh-1);">
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon pdf" style="width:44px; height:44px;">PDF</div>
+            <div style="flex:1; min-width:0;">
+              <strong style="font-size:14px; display:block;">Quarterly_Report_2022Q1.pdf</strong>
+              <div class="caption">Archived by Sameer Khan · 1 yr ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--text);">Permanent</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>4.2 MB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15a9 9 0 11-2.13-9.36L23 10"/></svg>
+              Restore
+            </button>
+            <button class="btn btn-ghost btn-sm btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--warning); border-radius:12px; padding: 16px; box-shadow: var(--sh-1); position:relative;">
+          <span class="badge badge-warning" style="position:absolute; top:14px; right:14px;"><span class="dot"></span>Purge in 8 days</span>
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon doc" style="width:44px; height:44px;">DOC</div>
+            <div style="flex:1; min-width:0; padding-right:80px;">
+              <strong style="font-size:14px; display:block;">Old_Vendor_List_2020.docx</strong>
+              <div class="caption">Archived by Ravi Mehta · 3 yrs ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--text);">3 years (expired)</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>820 KB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">Restore</button>
+            <button class="btn btn-secondary btn-sm">Extend</button>
+          </div>
+        </div>
+
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding: 16px; box-shadow: var(--sh-1);">
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon zip" style="width:44px; height:44px;">ZIP</div>
+            <div style="flex:1; min-width:0;">
+              <strong style="font-size:14px; display:block;">Field_Photos_Karnataka_2024.zip</strong>
+              <div class="caption">Archived by Kavya Patel · 8 mo ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--text);">5 years</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>284 MB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">Restore</button>
+            <button class="btn btn-ghost btn-sm btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+          </div>
+        </div>
+
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding: 16px; box-shadow: var(--sh-1);">
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon xls" style="width:44px; height:44px;">XLS</div>
+            <div style="flex:1; min-width:0;">
+              <strong style="font-size:14px; display:block;">Donor_Pledges_FY23.xlsx</strong>
+              <div class="caption">Archived by Anika Singh · 1 yr ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--text);">7 years</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>1.4 MB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">Restore</button>
+            <button class="btn btn-ghost btn-sm btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+          </div>
+        </div>
+
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--warning); border-radius:12px; padding: 16px; box-shadow: var(--sh-1); position:relative;">
+          <span class="badge badge-danger" style="position:absolute; top:14px; right:14px;"><span class="dot"></span>Purge in 3 days</span>
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon pdf" style="width:44px; height:44px;">PDF</div>
+            <div style="flex:1; min-width:0; padding-right:80px;">
+              <strong style="font-size:14px; display:block;">Legacy_Policy_v1.pdf</strong>
+              <div class="caption">Archived by Deepak Tiwari · 5 yrs ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--danger);">Expired</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>720 KB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">Restore</button>
+            <button class="btn btn-secondary btn-sm">Extend</button>
+          </div>
+        </div>
+
+        <div class="card-body" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding: 16px; box-shadow: var(--sh-1);">
+          <div style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px;">
+            <div class="file-icon img" style="width:44px; height:44px;">IMG</div>
+            <div style="flex:1; min-width:0;">
+              <strong style="font-size:14px; display:block;">Event_Photos_AGM_2023.zip</strong>
+              <div class="caption">Archived by Neha Verma · 2 yrs ago</div>
+            </div>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-subtle); margin-bottom:10px;">
+            <div class="between" style="margin-bottom:4px;"><span>Retention</span><strong style="color:var(--text);">5 years</strong></div>
+            <div class="between" style="margin-bottom:4px;"><span>Storage tier</span><span class="badge" style="padding:1px 6px;">Cold</span></div>
+            <div class="between"><span>Size</span><span>148 MB</span></div>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-secondary btn-sm flex-1">Restore</button>
+            <button class="btn btn-ghost btn-sm btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retention analytics -->
+      <h3 class="mt-8 mb-4">Retention Analytics</h3>
+      <div class="dash-grid">
+        <div class="card">
+          <div class="card-head"><div><h3>Archive growth (12 months)</h3><div class="sub">Documents archived per month</div></div></div>
+          <div class="card-body">
+            <svg viewBox="0 0 720 220" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="ga" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#F59E0B" stop-opacity=".4"/>
+                  <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g stroke="#E2E8F0" stroke-dasharray="3 3">
+                <line x1="40" y1="30" x2="700" y2="30"/>
+                <line x1="40" y1="80" x2="700" y2="80"/>
+                <line x1="40" y1="130" x2="700" y2="130"/>
+                <line x1="40" y1="180" x2="700" y2="180"/>
+              </g>
+              <g fill="#94A3B8" font-size="10" font-family="Inter" text-anchor="middle">
+                <text x="70"  y="208">Jun</text><text x="125" y="208">Jul</text><text x="180" y="208">Aug</text><text x="235" y="208">Sep</text><text x="290" y="208">Oct</text><text x="345" y="208">Nov</text><text x="400" y="208">Dec</text><text x="455" y="208">Jan</text><text x="510" y="208">Feb</text><text x="565" y="208">Mar</text><text x="620" y="208">Apr</text><text x="675" y="208">May</text>
+              </g>
+              <path d="M40,150 L70,140 125,130 180,120 235,135 290,100 345,110 400,80 455,90 510,70 565,55 620,50 675,40 700,40 L700,190 L40,190 Z" fill="url(#ga)"/>
+              <path d="M40,150 L70,140 125,130 180,120 235,135 290,100 345,110 400,80 455,90 510,70 565,55 620,50 675,40" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+              <g fill="#F59E0B">
+                <circle cx="70"  cy="140" r="3"/><circle cx="125" cy="130" r="3"/><circle cx="180" cy="120" r="3"/><circle cx="235" cy="135" r="3"/><circle cx="290" cy="100" r="3"/><circle cx="345" cy="110" r="3"/><circle cx="400" cy="80"  r="3"/><circle cx="455" cy="90"  r="3"/><circle cx="510" cy="70"  r="3"/><circle cx="565" cy="55"  r="3"/><circle cx="620" cy="50"  r="3"/><circle cx="675" cy="40"  r="4" stroke="#fff" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>By Retention Period</h3></div>
+          <div class="card-body">
+            <div class="stack" style="gap:14px;">
+              <div>
+                <div class="between" style="margin-bottom:4px;"><span>Permanent</span><strong>2,184</strong></div>
+                <div class="progress"><span style="width:35%;"></span></div>
+              </div>
+              <div>
+                <div class="between" style="margin-bottom:4px;"><span>10 years</span><strong>1,624</strong></div>
+                <div class="progress"><span style="width:26%; background:linear-gradient(90deg,#14B8A6,#0F766E);"></span></div>
+              </div>
+              <div>
+                <div class="between" style="margin-bottom:4px;"><span>7 years</span><strong>1,142</strong></div>
+                <div class="progress"><span style="width:18%; background:linear-gradient(90deg,#F59E0B,#D97706);"></span></div>
+              </div>
+              <div>
+                <div class="between" style="margin-bottom:4px;"><span>5 years</span><strong>892</strong></div>
+                <div class="progress"><span style="width:14%; background:linear-gradient(90deg,#A855F7,#7C3AED);"></span></div>
+              </div>
+              <div>
+                <div class="between" style="margin-bottom:4px;"><span>3 years</span><strong>452</strong></div>
+                <div class="progress"><span style="width:7%; background:linear-gradient(90deg,#EF4444,#DC2626);"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Permanent delete confirm modal -->
+<div class="modal-overlay" id="purge-modal">
+  <div class="modal">
+    <div class="modal-head" style="text-align:center; padding-top: 28px;">
+      <div style="width:64px; height:64px; border-radius:50%; background: var(--danger-50); color: var(--danger); display:grid; place-items:center; margin: 0 auto 12px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+      </div>
+      <h3>Permanently delete 132 documents?</h3>
+      <p>This action is <strong style="color:var(--danger);">irreversible</strong>. Files will be removed from cold storage with no recovery possible.</p>
+    </div>
+    <div class="modal-body">
+      <div style="background: var(--danger-50); border: 1px solid #FECACA; border-radius:10px; padding: 12px 14px; font-size: 13px; color: #991B1B; margin-bottom: 12px;">
+        Type <strong>DELETE</strong> to confirm
+      </div>
+      <input class="input" placeholder="Type DELETE" />
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" data-close-modal>Cancel</button>
+      <button class="btn btn-danger">Permanently delete</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

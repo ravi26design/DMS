@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audit Logs · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span><span class="nav-badge">12</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search events, users, IPs..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export logs</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Governance</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Audit Logs</span></div>
+          <h1>Audit Logs &amp; Monitoring</h1>
+          <p>Complete activity trail for compliance, security and operational oversight.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary btn-sm">Last 7 days <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="btn btn-secondary btn-sm">Filters</button>
+          <button class="btn btn-primary btn-sm">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="kpi-grid mb-6">
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Total events</div><div class="kpi-value">12,486</div></div><div class="kpi-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div></div><div class="kpi-foot"><span class="kpi-delta up">+14%</span><span>vs last week</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Security events</div><div class="kpi-value">7</div></div><div class="kpi-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></div></div><div class="kpi-foot"><span class="badge badge-danger"><span class="dot"></span>2 critical</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Failed logins</div><div class="kpi-value">42</div></div><div class="kpi-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M15 8v13M3 8h9M3 16h6"/></svg></div></div><div class="kpi-foot"><span class="kpi-delta down">-18%</span><span>improving</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Anomalies detected</div><div class="kpi-value">0</div></div><div class="kpi-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div></div><div class="kpi-foot"><span style="color:var(--success); font-weight:600;">System healthy</span></div></div>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <button class="tab active">All events<span class="count">12,486</span></button>
+        <button class="tab">Authentication</button>
+        <button class="tab">Documents</button>
+        <button class="tab">Permissions</button>
+        <button class="tab">Security<span class="count">7</span></button>
+        <button class="tab">System</button>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="row mb-4" style="flex-wrap:wrap;">
+        <div class="chips">
+          <button class="chip active" data-toggle>Severity: All</button>
+          <button class="chip" data-toggle>User: Any</button>
+          <button class="chip" data-toggle>IP: Any</button>
+          <button class="chip" data-toggle>Action: Any</button>
+          <button class="chip" data-toggle>Result: Any</button>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <!-- Audit log table -->
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Event</th>
+                <th>User</th>
+                <th>Resource</th>
+                <th>IP Address</th>
+                <th>Severity</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">2:48 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon red" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div><div><strong style="font-size:13.5px;">Permission escalation blocked</strong><div class="caption">Attempted role change to Admin</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar" style="background:linear-gradient(135deg,#64748B,#475569);">vt</span> vendor-tmp-04</div></td>
+                <td class="mono" style="font-size:12px;">/auth/role-change</td>
+                <td class="mono" style="font-size:12px;">203.0.113.42</td>
+                <td><span class="badge badge-danger"><span class="dot"></span>Critical</span></td>
+                <td><span class="badge badge-danger" style="padding:1px 6px;">Blocked</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">2:46 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon green" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong style="font-size:13.5px;">Document approved</strong><div class="caption">Annual_Compliance_Report_2025.pdf</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c1">AS</span> Anika Singh</div></td>
+                <td class="mono" style="font-size:12px;">FES-LEG-2025-0142</td>
+                <td class="mono" style="font-size:12px;">10.0.4.18</td>
+                <td><span class="badge"><span class="dot"></span>Info</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">2:30 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon blue" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div><div><strong style="font-size:13.5px;">Document uploaded</strong><div class="caption">Grant_Agreement_NABARD_2026.docx</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c3">RM</span> Ravi Mehta</div></td>
+                <td class="mono" style="font-size:12px;">/documents/upload</td>
+                <td class="mono" style="font-size:12px;">10.0.6.92</td>
+                <td><span class="badge"><span class="dot"></span>Info</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">2:12 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon amber" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 8a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M15 8v13M3 8h9M3 16h6"/></svg></div><div><strong style="font-size:13.5px;">Permission updated</strong><div class="caption">User added to Legal Team</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c1">PS</span> Priya Sharma</div></td>
+                <td>kavya.patel@fes.org.in</td>
+                <td class="mono" style="font-size:12px;">10.0.4.2</td>
+                <td><span class="badge badge-warning"><span class="dot"></span>Notice</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">1:52 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon purple" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4z"/></svg></div><div><strong style="font-size:13.5px;">Metadata edited</strong><div class="caption">Updated tags on 3 documents</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c4">SK</span> Sameer Khan</div></td>
+                <td class="mono" style="font-size:12px;">documents/batch</td>
+                <td class="mono" style="font-size:12px;">10.0.4.41</td>
+                <td><span class="badge"><span class="dot"></span>Info</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">1:34 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon green" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg></div><div><strong style="font-size:13.5px;">Sign-in</strong><div class="caption">SSO via Microsoft Entra</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c2">KP</span> Kavya Patel</div></td>
+                <td class="mono" style="font-size:12px;">/auth/login</td>
+                <td class="mono" style="font-size:12px;">10.0.7.14</td>
+                <td><span class="badge"><span class="dot"></span>Info</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">1:18 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon red" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div><div><strong style="font-size:13.5px;">Failed login (3rd attempt)</strong><div class="caption">Account temporarily locked</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar" style="background:linear-gradient(135deg,#94A3B8,#64748B);">??</span> unknown@external.com</div></td>
+                <td class="mono" style="font-size:12px;">/auth/login</td>
+                <td class="mono" style="font-size:12px;">198.51.100.7</td>
+                <td><span class="badge badge-warning"><span class="dot"></span>High</span></td>
+                <td><span class="badge badge-danger" style="padding:1px 6px;">Blocked</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">12:42 PM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon amber" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7"/></svg></div><div><strong style="font-size:13.5px;">12 documents archived</strong><div class="caption">Retention policy applied</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c4">SK</span> Sameer Khan</div></td>
+                <td class="mono" style="font-size:12px;">documents/archive</td>
+                <td class="mono" style="font-size:12px;">10.0.4.41</td>
+                <td><span class="badge"><span class="dot"></span>Info</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+              <tr>
+                <td class="mono" style="font-size:12px; white-space:nowrap;">11:08 AM<br/><span style="color:var(--text-soft);">May 13, 2026</span></td>
+                <td><div style="display:flex; gap:8px; align-items:center;"><div class="kpi-icon blue" style="width:28px; height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></div><div><strong style="font-size:13.5px;">Bulk export</strong><div class="caption">142 records · CSV format</div></div></div></td>
+                <td><div class="cell-user"><span class="avatar c1">PS</span> Priya Sharma</div></td>
+                <td class="mono" style="font-size:12px;">/audit/export</td>
+                <td class="mono" style="font-size:12px;">10.0.4.2</td>
+                <td><span class="badge badge-warning"><span class="dot"></span>Notice</span></td>
+                <td><span class="badge badge-success" style="padding:1px 6px;">Success</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <span>Showing 1–9 of 12,486 events</span>
+            <div class="pages"><button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button><button class="active">1</button><button>2</button><button>3</button><button>…</button><button>1,387</button><button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button></div>
+          </div>
+        </div>
+
+        <!-- Right rail: events timeline + severity -->
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h3>Severity Breakdown</h3></div>
+            <div class="card-body">
+              <div class="stack" style="gap:14px;">
+                <div>
+                  <div class="between" style="margin-bottom:4px;"><span style="display:flex; align-items:center; gap:6px;"><span style="width:8px; height:8px; background:var(--danger); border-radius:50%;"></span>Critical</span><strong>2</strong></div>
+                  <div class="progress"><span style="width:2%; background:var(--danger);"></span></div>
+                </div>
+                <div>
+                  <div class="between" style="margin-bottom:4px;"><span style="display:flex; align-items:center; gap:6px;"><span style="width:8px; height:8px; background:var(--warning); border-radius:50%;"></span>High</span><strong>5</strong></div>
+                  <div class="progress"><span style="width:5%; background:var(--warning);"></span></div>
+                </div>
+                <div>
+                  <div class="between" style="margin-bottom:4px;"><span style="display:flex; align-items:center; gap:6px;"><span style="width:8px; height:8px; background:#0EA5E9; border-radius:50%;"></span>Notice</span><strong>284</strong></div>
+                  <div class="progress"><span style="width:30%; background:#0EA5E9;"></span></div>
+                </div>
+                <div>
+                  <div class="between" style="margin-bottom:4px;"><span style="display:flex; align-items:center; gap:6px;"><span style="width:8px; height:8px; background:var(--success); border-radius:50%;"></span>Info</span><strong>12,195</strong></div>
+                  <div class="progress"><span style="width:97%; background:var(--success);"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>Live Activity</h3><span class="badge badge-success"><span class="dot"></span>Streaming</span></div>
+            <div class="card-body">
+              <div class="timeline">
+                <div class="tl-item"><span class="tl-dot success"></span><div class="tl-content"><div class="head"><div class="title">Document approved by Anika</div><span class="time">12s</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot"></span><div class="tl-content"><div class="head"><div class="title">Ravi uploaded a new document</div><span class="time">48s</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot warning"></span><div class="tl-content"><div class="head"><div class="title">Multi-region session detected</div><span class="time">1m</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot danger"></span><div class="tl-content"><div class="head"><div class="title">Permission escalation blocked</div><span class="time">2m</span></div></div></div>
+                <div class="tl-item"><span class="tl-dot"></span><div class="tl-content"><div class="head"><div class="title">Kavya signed in via SSO</div><span class="time">8m</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

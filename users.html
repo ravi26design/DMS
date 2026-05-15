@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Management · FES DMS</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="sb-logo">FE</div><div class="sb-brand-text"><strong>FES Repository</strong><span>Document &amp; Legal DMS</span></div></div>
+    <div class="sb-scroll">
+      <div class="sb-section">
+        <div class="sb-section-title">Workspace</div>
+        <a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span class="nav-label">Dashboard</span></a>
+        <a href="documents.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="nav-label">Documents</span></a>
+        <a href="legal.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"/></svg><span class="nav-label">Legal Repository</span></a>
+        <a href="search.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span class="nav-label">Advanced Search</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Governance</div>
+        <a href="audit.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span class="nav-label">Audit Logs</span></a>
+        <a href="archive.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 12h4"/></svg><span class="nav-label">Archive</span></a>
+      </div>
+      <div class="sb-section">
+        <div class="sb-section-title">Administration</div>
+        <a href="users.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="nav-label">User Management</span></a>
+        <a href="users.html#roles" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="nav-label">Roles &amp; Permissions</span></a>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg><span class="nav-label">Reports &amp; Analytics</span></a>
+        <a href="settings.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/></svg><span class="nav-label">Settings</span></a>
+        <a href="design-system.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/></svg><span class="nav-label">Design System</span></a>
+      </div>
+    </div>
+    <div class="sb-foot"><div class="avatar c1">PS</div><div class="sb-foot-info"><strong>Priya Sharma</strong><span>Super Admin</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="tb-collapse" data-collapse><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="tb-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="Search users, departments, roles..." /><kbd>⌘K</kbd></div>
+      <div class="tb-actions">
+        <button class="btn btn-primary btn-sm" data-open-drawer="invite-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>Invite users</button>
+        <button class="tb-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></button>
+        <div style="width:1px; height:24px; background:var(--border); margin: 0 8px;"></div>
+        <button class="tb-icon-btn" style="display:flex; gap:8px; padding: 4px 8px 4px 4px;"><span class="avatar c1">PS</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <div class="crumbs"><span>Administration</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>User Management</span></div>
+          <h1>User Management</h1>
+          <p>412 active users across 12 departments · 24 pending invitations</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary btn-sm">Bulk import (.csv)</button>
+          <button class="btn btn-primary btn-sm" data-open-drawer="invite-drawer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+            Invite user
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI -->
+      <div class="kpi-grid mb-6">
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Total users</div><div class="kpi-value">412</div></div><div class="kpi-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div></div><div class="kpi-foot"><span class="kpi-delta up">+8</span><span>this week</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Active in last 30 days</div><div class="kpi-value">387</div></div><div class="kpi-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div></div><div class="kpi-foot"><span>94% engagement</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Pending invites</div><div class="kpi-value">24</div></div><div class="kpi-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div></div><div class="kpi-foot"><span>Avg. 1.2 days to accept</span></div></div>
+        <div class="kpi"><div class="kpi-top"><div><div class="kpi-label">Suspended</div><div class="kpi-value">6</div></div><div class="kpi-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div></div><div class="kpi-foot"><span>2 awaiting review</span></div></div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs" data-tabs>
+        <button class="tab active">All users<span class="count">412</span></button>
+        <button class="tab">Pending<span class="count">24</span></button>
+        <button class="tab" id="roles">Roles &amp; Permissions</button>
+        <button class="tab">Departments<span class="count">12</span></button>
+        <button class="tab">Activity log</button>
+      </div>
+
+      <!-- User table -->
+      <div class="table-wrap">
+        <div class="table-toolbar">
+          <div class="search-mini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input placeholder="Search by name, email, or role..." />
+          </div>
+          <button class="btn btn-secondary btn-sm">Role: All</button>
+          <button class="btn btn-secondary btn-sm">Department: All</button>
+          <button class="btn btn-secondary btn-sm">Status: Active</button>
+          <div class="toolbar-right">
+            <button class="btn btn-secondary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export</button>
+          </div>
+        </div>
+
+        <table class="data">
+          <thead>
+            <tr>
+              <th class="check"><input type="checkbox" /></th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Department</th>
+              <th>Status</th>
+              <th>Last active</th>
+              <th>2FA</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div class="cell-user">
+                  <span class="avatar lg c1">PS</span>
+                  <div><div style="font-weight:600;">Priya Sharma <span class="badge badge-outline" style="margin-left:4px;">You</span></div><div class="caption">priya.sharma@fes.org.in</div></div>
+                </div>
+              </td>
+              <td><span class="badge badge-danger">Super Admin</span></td>
+              <td>Executive</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">Just now</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn" data-open-drawer="user-drawer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c1">AS</span><div><div style="font-weight:600;">Anika Singh</div><div class="caption">anika.singh@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-primary">Legal Team</span></td>
+              <td>Legal &amp; Compliance</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">2 min ago</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn" data-open-drawer="user-drawer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c3">RM</span><div><div style="font-weight:600;">Ravi Mehta</div><div class="caption">ravi.mehta@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-accent">Management</span></td>
+              <td>Finance</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">18 min ago</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn" data-open-drawer="user-drawer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c2">KP</span><div><div style="font-weight:600;">Kavya Patel</div><div class="caption">kavya.patel@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-info">Department User</span></td>
+              <td>Conservation</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">1 hr ago</td>
+              <td><span class="badge badge-warning" style="padding:1px 6px;">Pending</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c4">SK</span><div><div style="font-weight:600;">Sameer Khan</div><div class="caption">sameer.khan@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-primary">Legal Team</span></td>
+              <td>Legal &amp; Compliance</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">3 hr ago</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c6">NV</span><div><div style="font-weight:600;">Neha Verma</div><div class="caption">neha.verma@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-info">Department User</span></td>
+              <td>Conservation</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">Yesterday</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c5">DT</span><div><div style="font-weight:600;">Deepak Tiwari</div><div class="caption">deepak.tiwari@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-accent">Management</span></td>
+              <td>Governance</td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td class="muted">Yesterday</td>
+              <td><span class="badge badge-success" style="padding:1px 6px;">✓ On</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg c4">VM</span><div><div style="font-weight:600;">Vikram Mehra</div><div class="caption">vikram.mehra@fes.org.in</div></div></div></td>
+              <td><span class="badge badge-outline">Read-only</span></td>
+              <td>Data Sciences</td>
+              <td><span class="badge badge-warning"><span class="dot"></span>Invited</span></td>
+              <td class="muted">Pending acceptance</td>
+              <td><span style="color:var(--text-soft);">—</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><div class="cell-user"><span class="avatar lg" style="background:linear-gradient(135deg,#64748B,#475569);">vt</span><div><div style="font-weight:600;">vendor-tmp-04</div><div class="caption">contractor · external</div></div></div></td>
+              <td><span class="badge badge-outline">Read-only</span></td>
+              <td>External</td>
+              <td><span class="badge badge-danger"><span class="dot"></span>Suspended</span></td>
+              <td class="muted">2 hr ago</td>
+              <td><span style="color:var(--text-soft);">—</span></td>
+              <td><div class="row-actions"><button class="tb-icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span>Showing 1–9 of 412 users</span>
+          <div class="pages"><button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button><button class="active">1</button><button>2</button><button>3</button><button>…</button><button>42</button><button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button></div>
+        </div>
+      </div>
+
+      <!-- Roles & Permissions Matrix -->
+      <h3 class="mt-8 mb-4">Permission Matrix</h3>
+      <div class="card">
+        <div class="card-head">
+          <div><h3>Roles &amp; Permissions</h3><div class="sub">Granular access control across all modules</div></div>
+          <button class="btn btn-secondary btn-sm">+ New role</button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="perm-matrix">
+            <thead>
+              <tr>
+                <th style="min-width:220px;">Permission</th>
+                <th><div class="role-head"><span class="badge badge-danger">Super Admin</span><span class="caption">3 users</span></div></th>
+                <th><div class="role-head"><span class="badge badge-primary">Legal Team</span><span class="caption">14 users</span></div></th>
+                <th><div class="role-head"><span class="badge badge-accent">Management</span><span class="caption">28 users</span></div></th>
+                <th><div class="role-head"><span class="badge badge-info">Department User</span><span class="caption">312 users</span></div></th>
+                <th><div class="role-head"><span class="badge badge-outline">Read-only</span><span class="caption">55 users</span></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:500;">View documents</td>
+                <td><label class="switch"><input type="checkbox" checked disabled/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Upload documents</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Edit metadata</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Approve / Reject</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Access Legal Repository</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Archive documents</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Delete documents</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">View audit logs</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Manage users</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+              <tr>
+                <td style="font-weight:500;">Configure system settings</td>
+                <td><label class="switch"><input type="checkbox" checked/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+                <td><label class="switch"><input type="checkbox"/><span class="slider"></span></label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Invite user drawer -->
+<div class="drawer-overlay" data-for="invite-drawer"></div>
+<aside class="drawer" id="invite-drawer">
+  <div class="drawer-head"><div><h3>Invite users</h3><div class="caption">Add team members to FES Repository</div></div><button class="tb-icon-btn" data-close-drawer><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+  <div class="drawer-body">
+    <div class="field"><label>Email addresses</label>
+      <textarea class="textarea" rows="3" placeholder="anika.singh@fes.org.in&#10;ravi.mehta@fes.org.in">anika.singh@fes.org.in
+ravi.mehta@fes.org.in</textarea>
+      <div class="hint">Separate multiple emails with commas or new lines</div>
+    </div>
+    <div class="grid-2 mt-4">
+      <div class="field"><label>Role</label><select class="select"><option>Department User</option><option>Management</option><option>Legal Team</option><option>Read-only</option></select></div>
+      <div class="field"><label>Department</label><select class="select"><option>Legal &amp; Compliance</option><option>Finance</option><option>Conservation</option></select></div>
+    </div>
+    <div class="field mt-4"><label>Personal message (optional)</label><textarea class="textarea" placeholder="Welcome to the FES Repository..."></textarea></div>
+
+    <div class="card mt-4">
+      <div class="card-body" style="padding: 14px 16px;">
+        <div class="between" style="margin-bottom:10px;">
+          <div><strong style="font-size:13.5px;">Send welcome email</strong><div class="caption">Includes onboarding guide</div></div>
+          <label class="switch"><input type="checkbox" checked/><span class="slider"></span></label>
+        </div>
+        <div class="between" style="margin-bottom:10px;">
+          <div><strong style="font-size:13.5px;">Require 2FA on first sign-in</strong><div class="caption">Mandatory per security policy</div></div>
+          <label class="switch"><input type="checkbox" checked disabled/><span class="slider"></span></label>
+        </div>
+        <div class="between">
+          <div><strong style="font-size:13.5px;">Auto-expire invite in 7 days</strong></div>
+          <label class="switch"><input type="checkbox" checked/><span class="slider"></span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-secondary" data-close-drawer>Cancel</button>
+    <button class="btn btn-primary">Send invitations</button>
+  </div>
+</aside>
+
+<!-- User profile drawer -->
+<div class="drawer-overlay" data-for="user-drawer"></div>
+<aside class="drawer" id="user-drawer" style="width:520px;">
+  <div class="drawer-head">
+    <div style="display:flex; gap:14px; align-items:center;">
+      <div class="avatar xl c1">AS</div>
+      <div>
+        <h3 style="font-size:16px;">Anika Singh</h3>
+        <div class="caption">Senior Legal Counsel · Legal &amp; Compliance</div>
+        <div style="margin-top:6px; display:flex; gap:6px;">
+          <span class="badge badge-primary">Legal Team</span>
+          <span class="badge badge-success"><span class="dot"></span>Active</span>
+        </div>
+      </div>
+    </div>
+    <button class="tb-icon-btn" data-close-drawer><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div data-tabs class="tabs" style="margin: 0 20px;">
+    <button class="tab active">Overview</button>
+    <button class="tab">Permissions</button>
+    <button class="tab">Activity<span class="count">142</span></button>
+    <button class="tab">Sessions</button>
+  </div>
+  <div class="drawer-body" style="padding-top: 0;">
+    <div class="card mt-4">
+      <div class="card-body">
+        <h4 style="margin-bottom:12px;">Profile details</h4>
+        <div class="grid-2" style="gap: 14px 24px;">
+          <div><div class="caption">Email</div><strong style="font-size:13.5px;">anika.singh@fes.org.in</strong></div>
+          <div><div class="caption">Phone</div><strong style="font-size:13.5px;">+91 98765 12345</strong></div>
+          <div><div class="caption">Employee ID</div><strong class="mono" style="font-size:12.5px;">FES-LEG-0142</strong></div>
+          <div><div class="caption">Joined</div><strong style="font-size:13.5px;">Mar 2022</strong></div>
+          <div><div class="caption">Manager</div><strong style="font-size:13.5px;">Priya Sharma</strong></div>
+          <div><div class="caption">Location</div><strong style="font-size:13.5px;">Anand, Gujarat</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h4 style="margin-bottom:12px;">Activity stats (last 30 days)</h4>
+        <div class="grid-4" style="gap: 12px;">
+          <div><div class="caption">Logins</div><strong style="font-size:18px;">28</strong></div>
+          <div><div class="caption">Uploads</div><strong style="font-size:18px;">42</strong></div>
+          <div><div class="caption">Approvals</div><strong style="font-size:18px;">86</strong></div>
+          <div><div class="caption">Downloads</div><strong style="font-size:18px;">214</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h4 style="margin-bottom:12px;">Recent activity</h4>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-dot success"></span><div class="tl-content"><div class="head"><div class="title">Approved Annual Compliance Report</div><span class="time">2m</span></div></div></div>
+          <div class="tl-item"><span class="tl-dot"></span><div class="tl-content"><div class="head"><div class="title">Updated metadata on 3 contracts</div><span class="time">1h</span></div></div></div>
+          <div class="tl-item"><span class="tl-dot"></span><div class="tl-content"><div class="head"><div class="title">Created case FES-LEG-2026-0163</div><span class="time">3h</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-danger" style="margin-right:auto;">Suspend</button>
+    <button class="btn btn-secondary">Reset password</button>
+    <button class="btn btn-primary">Edit user</button>
+  </div>
+</aside>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
